@@ -1,6 +1,0 @@
-.vscode/**
-.settings/**
-**/__pycache__/**
-asm/.vscode/settings.json
-asm/test/
-asm/.vscode/
