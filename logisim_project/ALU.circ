@@ -1055,9 +1055,6 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <comp lib="3" loc="(480,280)" name="Multiplier">
       <a name="width" val="16"/>
     </comp>
-    <comp lib="3" loc="(280,520)" name="Multiplier">
-      <a name="width" val="2"/>
-    </comp>
     <comp lib="0" loc="(270,330)" name="Constant">
       <a name="facing" val="north"/>
       <a name="value" val="0x0"/>
@@ -1124,9 +1121,6 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     </comp>
     <comp lib="0" loc="(490,100)" name="Probe">
       <a name="facing" val="north"/>
-    </comp>
-    <comp lib="3" loc="(280,450)" name="Multiplier">
-      <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(300,390)" name="Probe">
       <a name="facing" val="north"/>
