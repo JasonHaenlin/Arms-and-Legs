@@ -2,17 +2,32 @@ from sys import *
 from instructions import *
 
 def readFile(filename):
+    """
+        Use this function to read the content of a file
+    """
     file = open(filename, "r")
     content = file.read()
     file.close()
     return content
 
 def writeFile(filename, binaries):
+    """
+        Use this function to write content to a specific file
+    """
     file = open(filename, "w")
     file.write(binaries)
     file.close()
 
 def translate(args):
+    """
+        Main method of the program:
+            takes an assembly line of code and
+            translates it into hexadecimal binary
+
+            each if statement takes care of the first assembly
+            "word" of the line to determine the algorithm to use
+            to convert it
+    """
     try:
         cmd = args[0].lower()
         imm = any("#" in arg for arg in args)
@@ -82,12 +97,17 @@ def translate(args):
         elif cmd == "sub":
             hexa = SUBspimm(args[2])
         elif cmd == "b":
-            hexa = B(args[1], args[2])
+            args[0] = args[0].replace("B", "")
+            hexa = B(args[0], args[1])
         return hex(hexa).replace("0x", "")
     except:
         return ""
 
 def readLine(line):
+    """
+        Reads an assembly line of code and seperates it into
+        different words to simplify translation
+    """
     args = line.replace(",", "").replace("  ", " ").replace("\t", " ").replace("[", "").replace("]", "").replace("(", "").replace(")", "").replace("{", "").replace("}", "").split(' ')
     for i in range(len(args)):
         if args[i] == "":
@@ -95,6 +115,11 @@ def readLine(line):
     return args
 
 def parse(content):
+    """
+        for each line of assembly code:
+            Parses the line then converts it to binaries
+            appends the hexadecimal result to the compiled code
+    """
     binaries = ""
     for line in content.split('\n'):
         translation = translate(readLine(line))
@@ -104,9 +129,18 @@ def parse(content):
             binaries += translation
     return binaries
 
-if __name__ == "__main__":
+
+def main():
+    """
+        Reads the content of an assembly file
+        Compiles the content
+        writes the result in an output file
+    """
     filename = argv[1]
     output = argv[2]
     code = readFile(filename)
     binaries = "v2.0 raw\n" + parse(code) + "\n"
-    writeFile(output, binaries)  
+    writeFile(output, binaries)
+
+if __name__ == "__main__":
+    main()

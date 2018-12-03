@@ -1,7 +1,22 @@
 def bin16(n):
+    """
+        Converts an 16-bits int to it's 16-bits binary form
+        Built-in bin function removes exceeding '0' at the
+        left of the result
+    """
     return ''.join(str(1 & int(n) >> i) for i in range(16)[::-1])
 
 def putByte(byte, maxrank, minrank, value):
+    """
+        Manipulates bits in a given 16-bits int
+        Writes value starting at rank minrank
+        and finishing at maxrank
+
+        putByte(128, 6, 3, 5) outputs 184
+        128: 0000000010000000
+        5:   0000000000000101
+        184: 0000000010101000
+    """
     if type(value) == str:
         value = value.replace("#", "").replace("r", "").replace("R", "")
     value = int(value)
@@ -23,6 +38,11 @@ def putByte(byte, maxrank, minrank, value):
     return newbyte
 
 def LSLSimm(rd, rm, imm5):
+    """
+        function: immediate logical left shift
+        assembly: LSLS rd, rm, #imm5
+        binary: 000 00 imm5 rm rd
+    """
     byte = 0
     byte = putByte(byte, 10, 6, imm5)
     byte = putByte(byte, 5, 3, rm)
@@ -30,6 +50,11 @@ def LSLSimm(rd, rm, imm5):
     return byte
 
 def LSRSimm(rd, rm, imm5):
+    """
+        function: immediate logical right shift
+        assembly: LSRS rd, rm, #imm5
+        binary: 000 01 imm5 rm rd
+    """
     byte = 0
     byte = putByte(byte, 12, 11, 1)
     byte = putByte(byte, 10, 6, imm5)
@@ -38,6 +63,11 @@ def LSRSimm(rd, rm, imm5):
     return byte
 
 def ASRSimm(rd, rm, imm5):
+    """
+        function: immediate arithmetic shift right
+        assembly: ASRS rd, rm, #imm5
+        binary: 000 10 imm5 rm rd
+    """
     byte = 0
     byte = putByte(byte, 12, 11, 2)
     byte = putByte(byte, 10, 6, imm5)
@@ -46,6 +76,11 @@ def ASRSimm(rd, rm, imm5):
     return yte
 
 def ADDS(rd, rn, rm):
+    """
+        function: add register
+        assembly: ADDS rd, rn, rm
+        binary: 000 11 00 rm rn rd
+    """
     byte = 0
     byte = putByte(byte, 12, 11, 3)
     byte = putByte(byte, 8, 6, rm)
@@ -54,6 +89,11 @@ def ADDS(rd, rn, rm):
     return byte
 
 def SUBS(rd, rn, rm):
+    """
+        function: substract register
+        assembly: SUBS rd, rn, rm
+        binary: 000 11 01 rm rn rd
+    """
     byte = 0
     byte = putByte(byte, 12, 11, 3)
     byte = putByte(byte, 9, 9, 1)
@@ -63,6 +103,11 @@ def SUBS(rd, rn, rm):
     return byte
 
 def ADDSimm(rd, rn, imm3):
+    """
+        function: add 3-bits immediate
+        assembly: ADDS rd, rn, #imm3
+        binary: 000 11 10 imm3 rn rd
+    """
     byte = 0
     byte = putByte(byte, 12, 11, 3)
     byte = putByte(byte, 10, 10, 1)    
@@ -72,6 +117,11 @@ def ADDSimm(rd, rn, imm3):
     return byte
 
 def SUBSimm(rd, rn, imm3):
+    """
+        function: substract 3-bits immediate
+        assembly: SUBS rd, rn, #imm
+        binary: 000 11 11 imm3 rn rd
+    """
     byte = 0
     byte = putByte(byte, 12, 9, 15)
     byte = putByte(byte, 10, 10, 1)
@@ -82,6 +132,11 @@ def SUBSimm(rd, rn, imm3):
     return byte
 
 def MOVSimm(rd, imm8):
+    """
+        function: move
+        assembly: MOVS rd, #imm8
+        binary: 001 00 rd imm8
+    """
     byte = 0
     byte = putByte(byte, 15, 13, 1)
     byte = putByte(byte, 10, 8, rd)
@@ -89,6 +144,11 @@ def MOVSimm(rd, imm8):
     return byte
 
 def ANDS(rdn, rm):
+    """
+        function: bitwise and
+        assembly: ANDS rdn, rm
+        binary: 010000 0000 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 5, 3, rm)
@@ -96,6 +156,11 @@ def ANDS(rdn, rm):
     return byte
 
 def EORS(rdn,rm):
+    """
+        function: exclusive or
+        assembly: EORS rdn, rm
+        binary: 010000 0001 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 1)
@@ -104,6 +169,11 @@ def EORS(rdn,rm):
     return byte
 
 def LSLS(rdn, rm):
+    """
+        function: logical shift left
+        assembly: LSLS rdn, rm
+        binary: 010000 0010 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 2)
@@ -112,6 +182,11 @@ def LSLS(rdn, rm):
     return byte
 
 def LSRS(rdn, rm):
+    """
+        function: logical shift right
+        assembly: LSRS rdn, rm
+        binary: 010000 0011 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 3)
@@ -120,6 +195,11 @@ def LSRS(rdn, rm):
     return byte
 
 def ASRS(rdn, rm):
+    """
+        function: arithmetic shift right
+        assembly: ASRS rdn, rm
+        binary: 010000 0100 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 4)
@@ -128,6 +208,11 @@ def ASRS(rdn, rm):
     return byte
 
 def ADCS(rdn, rm):
+    """
+        function: add with carry
+        assembly: ADCS rdn, rm
+        binary: 010000 0101 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 5)
@@ -135,7 +220,12 @@ def ADCS(rdn, rm):
     byte = putByte(byte, 2, 0, rdn)
     return byte
 
-def ADCS(rdn, rm):
+def SBCS(rdn, rm):
+    """
+        function: substract with carry
+        assembly: SBCS rdn, rm
+        binary: 010000 0110 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 6)
@@ -144,6 +234,11 @@ def ADCS(rdn, rm):
     return byte
 
 def RORS(rdn, rm):
+    """
+        function: rotate right
+        assembly: RORS rdn, rm
+        binary: 010000 0111 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 7)
@@ -152,6 +247,11 @@ def RORS(rdn, rm):
     return byte
 
 def TST(rdn, rm):
+    """
+        function: set flags on bitwise and
+        assembly: TST rdn, rm
+        binary: 010000 1000 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 8)
@@ -160,6 +260,11 @@ def TST(rdn, rm):
     return byte
 
 def RSBS(rdn, rm):
+    """
+        function: immediate reverse substract from 0
+        assembly: RSBS rdn, rm
+        binary: 010000 1001 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 9)
@@ -168,6 +273,11 @@ def RSBS(rdn, rm):
     return byte
 
 def CMP(rdn, rm):
+    """
+        function: compare registers
+        assembly: CMP rdn, rm
+        binary: 010000 1010 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 10)
@@ -176,6 +286,11 @@ def CMP(rdn, rm):
     return byte
 
 def CMN(rdn, rm):
+    """
+        function: compare negative
+        assembly: CMN rdn, rm
+        binary: 010000 1011 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 11)
@@ -184,6 +299,11 @@ def CMN(rdn, rm):
     return byte
 
 def ORRS(rdn, rm):
+    """
+        function: logical or
+        assembly: ORRS rdn, rm
+        binary: 010000 1100 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 12)
@@ -192,6 +312,11 @@ def ORRS(rdn, rm):
     return byte
 
 def MULS(rdm, rm):
+    """
+        function: multiply two registers
+        assembly: MULS rdn, rm
+        binary: 010000 1101 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 13)
@@ -200,6 +325,11 @@ def MULS(rdm, rm):
     return byte
 
 def BICS(rdn, rm):
+    """
+        function: bit clear
+        assembly: BICS rdn, rm
+        binary: 010000 1110 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 14)
@@ -208,6 +338,11 @@ def BICS(rdn, rm):
     return byte
 
 def MVNS(rdn, rm):
+    """
+        function: bitwise not
+        assembly: MVNS rdn, rm
+        binary: 010000 1111 rm rdn
+    """
     byte = 0
     byte = putByte(byte, 15, 10, 16)
     byte = putByte(byte, 9, 6, 15)
@@ -216,6 +351,11 @@ def MVNS(rdn, rm):
     return byte
 
 def STR(rt, imm8):
+    """
+        function: immediate store register
+        assembly: STR rt, [SP, #imm8]
+        binary: 1001 0 rt imm8
+    """
     byte = 0
     byte = putByte(byte, 15, 12, 9)
     byte = putByte(byte, 10, 8, rt)
@@ -223,6 +363,11 @@ def STR(rt, imm8):
     return byte
 
 def LDR(rt, imm8):
+    """
+        function: load register
+        assembly: LDR rt, [SP, #imm8]
+        binary: 1001 1 rt imm8
+    """
     byte = 0
     byte = putByte(byte, 15, 12, 9)
     byte = putByte(byte, 11, 11, 1)
@@ -231,12 +376,22 @@ def LDR(rt, imm8):
     return byte
 
 def ADDspimm(imm7):
+    """
+        function: add immediate to sp
+        assembly: ADD [SP,] SP, #imm7
+        binary: 1011 0000 0 imm7
+    """
     byte = 0
     byte = putByte(byte, 15, 12, 11)
     byte = putByte(byte, 6, 0, imm7)
     return byte
 
 def SUBspimm(imm7):
+    """
+        function: substract immediate to sp
+        assembly: SUBS [SP,] SP, #imm7
+        binary: 1011 0000 1 imm7
+    """
     byte = 0
     byte = putByte(byte, 15, 12, 11)
     byte = putByte(byte, 7, 7, 1)
@@ -244,6 +399,11 @@ def SUBspimm(imm7):
     return byte
 
 def B(c, label):
+    """
+        function: conditionnal branch
+        assembly: Bc label
+        binary: 1101 c imm8
+    """
     byte = 0
     byte = putByte(byte, 15, 12, 13)
     byte = putByte(byte, 11, 8, c)
