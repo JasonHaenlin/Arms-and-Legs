@@ -28,6 +28,8 @@ def translate(args):
             "word" of the line to determine the algorithm to use
             to convert it
     """
+    if args == [""]:
+        return ""
     try:
         cmd = args[0].lower()
         imm = any("#" in arg for arg in args)
@@ -109,7 +111,7 @@ def readLine(line):
         different words to simplify translation
     """
     args = line.replace(",", "").replace("  ", " ").replace("\t", " ").replace("[", "").replace("]", "").replace("(", "").replace(")", "").replace("{", "").replace("}", "").split(' ')
-    for i in range(len(args)):
+    for i in range(len(args)-1):
         if args[i] == "":
             del args[i]
     return args
