@@ -187,16 +187,16 @@ end TCL_Generic;
       <rect height="4" stroke="none" width="10" x="210" y="238"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="204" y="64">PC</text>
       <rect height="20" stroke="none" width="150" x="60" y="310"/>
-      <circ-port height="10" pin="1320,210" width="10" x="215" y="255"/>
       <circ-port height="10" pin="1320,270" width="10" x="215" y="235"/>
-      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
       <circ-port height="8" pin="130,230" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="1320,360" width="10" x="215" y="155"/>
       <circ-port height="10" pin="1320,510" width="10" x="215" y="175"/>
-      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
       <circ-port height="10" pin="1320,410" width="10" x="215" y="195"/>
-      <circ-port height="10" pin="1340,1160" width="10" x="215" y="55"/>
       <circ-port height="10" pin="1320,170" width="10" x="215" y="135"/>
+      <circ-port height="10" pin="1340,1160" width="10" x="215" y="55"/>
+      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
+      <circ-port height="10" pin="1320,360" width="10" x="215" y="155"/>
+      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
+      <circ-port height="10" pin="1320,210" width="10" x="215" y="255"/>
       <rect fill="none" height="280" stroke="#000000" stroke-width="2" width="150" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="139" y="325">Controller</text>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="207" y="285">DP_Shift</text>
@@ -1425,7 +1425,6 @@ end TCL_Generic;
     <wire from="(820,930)" to="(840,930)"/>
     <wire from="(370,940)" to="(460,940)"/>
     <wire from="(120,260)" to="(120,420)"/>
-    <wire from="(920,550)" to="(940,550)"/>
     <wire from="(520,470)" to="(540,470)"/>
     <wire from="(890,90)" to="(890,130)"/>
     <wire from="(910,670)" to="(910,710)"/>
@@ -1469,7 +1468,6 @@ end TCL_Generic;
     <wire from="(880,730)" to="(890,730)"/>
     <wire from="(580,270)" to="(590,270)"/>
     <wire from="(960,900)" to="(960,910)"/>
-    <wire from="(1020,560)" to="(1020,570)"/>
     <wire from="(870,330)" to="(870,340)"/>
     <wire from="(530,220)" to="(590,220)"/>
     <wire from="(140,640)" to="(190,640)"/>
@@ -1484,8 +1482,6 @@ end TCL_Generic;
     <wire from="(160,600)" to="(190,600)"/>
     <wire from="(860,190)" to="(880,190)"/>
     <wire from="(870,520)" to="(890,520)"/>
-    <wire from="(900,550)" to="(920,550)"/>
-    <wire from="(980,550)" to="(1000,550)"/>
     <wire from="(380,500)" to="(410,500)"/>
     <wire from="(150,520)" to="(150,620)"/>
     <wire from="(1100,440)" to="(1110,440)"/>
@@ -1506,6 +1502,7 @@ end TCL_Generic;
     <wire from="(90,460)" to="(160,460)"/>
     <wire from="(870,690)" to="(880,690)"/>
     <wire from="(900,80)" to="(910,80)"/>
+    <wire from="(730,550)" to="(740,550)"/>
     <wire from="(530,200)" to="(530,210)"/>
     <wire from="(960,870)" to="(960,880)"/>
     <wire from="(520,350)" to="(570,350)"/>
@@ -1526,7 +1523,6 @@ end TCL_Generic;
     <wire from="(320,580)" to="(340,580)"/>
     <wire from="(560,250)" to="(590,250)"/>
     <wire from="(520,290)" to="(550,290)"/>
-    <wire from="(1000,530)" to="(1030,530)"/>
     <wire from="(840,370)" to="(870,370)"/>
     <wire from="(180,440)" to="(200,440)"/>
     <wire from="(400,430)" to="(410,430)"/>
@@ -1539,14 +1535,15 @@ end TCL_Generic;
     <wire from="(340,610)" to="(350,610)"/>
     <wire from="(210,160)" to="(220,160)"/>
     <wire from="(950,500)" to="(960,500)"/>
-    <wire from="(1020,570)" to="(1030,570)"/>
     <wire from="(140,320)" to="(140,440)"/>
     <wire from="(90,510)" to="(160,510)"/>
     <wire from="(870,260)" to="(880,260)"/>
     <wire from="(870,340)" to="(880,340)"/>
     <wire from="(890,520)" to="(900,520)"/>
-    <wire from="(1090,550)" to="(1110,550)"/>
+    <wire from="(680,550)" to="(690,550)"/>
+    <wire from="(760,560)" to="(760,570)"/>
     <wire from="(840,400)" to="(890,400)"/>
+    <wire from="(830,550)" to="(880,550)"/>
     <wire from="(180,490)" to="(180,560)"/>
     <wire from="(90,520)" to="(150,520)"/>
     <wire from="(150,350)" to="(200,350)"/>
@@ -1561,6 +1558,7 @@ end TCL_Generic;
     <wire from="(610,200)" to="(630,200)"/>
     <wire from="(260,410)" to="(280,410)"/>
     <wire from="(140,640)" to="(140,810)"/>
+    <wire from="(1040,550)" to="(1110,550)"/>
     <wire from="(140,530)" to="(140,640)"/>
     <wire from="(400,400)" to="(410,400)"/>
     <wire from="(90,470)" to="(170,470)"/>
@@ -1570,10 +1568,10 @@ end TCL_Generic;
     <wire from="(950,870)" to="(960,870)"/>
     <wire from="(960,880)" to="(970,880)"/>
     <wire from="(910,670)" to="(920,670)"/>
+    <wire from="(900,550)" to="(1040,550)"/>
     <wire from="(820,900)" to="(830,900)"/>
     <wire from="(880,720)" to="(890,720)"/>
     <wire from="(900,260)" to="(910,260)"/>
-    <wire from="(870,550)" to="(880,550)"/>
     <wire from="(880,640)" to="(890,640)"/>
     <wire from="(330,720)" to="(400,720)"/>
     <wire from="(340,740)" to="(400,740)"/>
@@ -1588,7 +1586,6 @@ end TCL_Generic;
     <wire from="(540,230)" to="(540,260)"/>
     <wire from="(210,140)" to="(210,160)"/>
     <wire from="(90,430)" to="(130,430)"/>
-    <wire from="(1000,530)" to="(1000,550)"/>
     <wire from="(1040,440)" to="(1060,440)"/>
     <wire from="(880,730)" to="(880,770)"/>
     <wire from="(150,350)" to="(150,450)"/>
@@ -1599,6 +1596,7 @@ end TCL_Generic;
     <wire from="(260,380)" to="(280,380)"/>
     <wire from="(150,620)" to="(150,790)"/>
     <wire from="(370,570)" to="(390,570)"/>
+    <wire from="(740,530)" to="(770,530)"/>
     <wire from="(900,440)" to="(1040,440)"/>
     <wire from="(550,240)" to="(550,290)"/>
     <wire from="(870,360)" to="(880,360)"/>
@@ -1606,6 +1604,7 @@ end TCL_Generic;
     <wire from="(880,610)" to="(890,610)"/>
     <wire from="(880,130)" to="(890,130)"/>
     <wire from="(870,440)" to="(880,440)"/>
+    <wire from="(760,570)" to="(770,570)"/>
     <wire from="(630,200)" to="(640,200)"/>
     <wire from="(830,890)" to="(830,900)"/>
     <wire from="(390,850)" to="(390,860)"/>
@@ -1656,6 +1655,7 @@ end TCL_Generic;
     <wire from="(890,200)" to="(890,220)"/>
     <wire from="(890,520)" to="(890,540)"/>
     <wire from="(630,180)" to="(630,200)"/>
+    <wire from="(740,530)" to="(740,550)"/>
     <wire from="(810,150)" to="(830,150)"/>
     <wire from="(870,290)" to="(890,290)"/>
     <wire from="(950,850)" to="(970,850)"/>
@@ -1820,11 +1820,6 @@ end TCL_Generic;
       <a name="label" val="i3"/>
     </comp>
     <comp lib="0" loc="(880,660)" name="Ground"/>
-    <comp lib="0" loc="(870,550)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Imm8"/>
-    </comp>
     <comp lib="0" loc="(380,410)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="i7"/>
@@ -1889,7 +1884,7 @@ end TCL_Generic;
       <a name="label" val="ADD_SUB_IMM"/>
     </comp>
     <comp lib="1" loc="(900,550)" name="Controlled Buffer">
-      <a name="width" val="8"/>
+      <a name="width" val="32"/>
       <a name="control" val="left"/>
     </comp>
     <comp lib="8" loc="(322,529)" name="Text">
@@ -2195,13 +2190,6 @@ end TCL_Generic;
       <a name="width" val="3"/>
       <a name="label" val="Rd"/>
     </comp>
-    <comp lib="0" loc="(920,550)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(980,550)" name="Bit Extender">
-      <a name="out_width" val="32"/>
-      <a name="type" val="zero"/>
-    </comp>
     <comp lib="0" loc="(640,200)" name="Tunnel">
       <a name="width" val="8"/>
       <a name="label" val="Imm8"/>
@@ -2209,11 +2197,23 @@ end TCL_Generic;
     <comp lib="0" loc="(630,180)" name="Probe">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(1020,560)" name="Power">
+    <comp lib="1" loc="(830,550)" name="XOR Gate">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(1090,550)" name="XOR Gate">
+    <comp lib="0" loc="(760,560)" name="Power">
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(680,550)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Imm8"/>
+    </comp>
+    <comp lib="0" loc="(730,550)" name="Bit Extender">
+      <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
+    </comp>
+    <comp lib="0" loc="(1040,550)" name="Pull Resistor">
+      <a name="facing" val="north"/>
     </comp>
   </circuit>
   <circuit name="Load_Store">
@@ -2242,14 +2242,14 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="102">RAM_Addr</text>
       <rect height="20" stroke="none" width="200" x="60" y="171"/>
       <rect fill="none" height="141" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
-      <circ-port height="8" pin="200,210" width="8" x="46" y="56"/>
       <circ-port height="10" pin="880,140" width="10" x="265" y="115"/>
-      <circ-port height="10" pin="880,370" width="10" x="265" y="95"/>
       <circ-port height="10" pin="880,100" width="10" x="265" y="135"/>
-      <circ-port height="8" pin="200,320" width="8" x="46" y="96"/>
       <circ-port height="8" pin="200,260" width="8" x="46" y="76"/>
-      <circ-port height="10" pin="880,280" width="10" x="265" y="75"/>
       <circ-port height="10" pin="880,260" width="10" x="265" y="55"/>
+      <circ-port height="10" pin="880,280" width="10" x="265" y="75"/>
+      <circ-port height="8" pin="200,320" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="880,370" width="10" x="265" y="95"/>
+      <circ-port height="8" pin="200,210" width="8" x="46" y="56"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="186">Load_Store</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="74" y="124">Clk</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="144">Reset</text>
@@ -2469,10 +2469,10 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="325" y="83">Write_Enable</text>
       <rect height="4" stroke="none" width="10" x="330" y="78"/>
       <circ-port height="10" pin="570,160" width="10" x="335" y="55"/>
-      <circ-port height="8" pin="210,290" width="8" x="46" y="76"/>
       <circ-port height="10" pin="670,310" width="10" x="335" y="75"/>
-      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
       <circ-port height="8" pin="210,190" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="210,290" width="8" x="46" y="76"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="327" y="64">New_Stack_Pointer</text>
       <rect height="20" stroke="none" width="270" x="60" y="110"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="270" x="60" y="50"/>
@@ -2710,16 +2710,16 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="124">ADD</text>
       <rect height="3" stroke="none" width="10" x="180" y="139"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="144">SUB</text>
-      <circ-port height="10" pin="280,120" width="10" x="185" y="75"/>
       <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
       <circ-port height="10" pin="280,50" width="10" x="185" y="55"/>
-      <circ-port height="10" pin="280,390" width="10" x="185" y="135"/>
       <circ-port height="10" pin="280,200" width="10" x="185" y="95"/>
-      <circ-port height="8" pin="40,190" width="8" x="46" y="116"/>
       <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="40,240" width="8" x="46" y="136"/>
       <circ-port height="10" pin="280,300" width="10" x="185" y="115"/>
+      <circ-port height="8" pin="40,240" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="40,190" width="8" x="46" y="116"/>
+      <circ-port height="10" pin="280,390" width="10" x="185" y="135"/>
+      <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="280,120" width="10" x="185" y="75"/>
       <rect height="3" stroke="none" width="10" x="180" y="159"/>
       <circ-port height="10" pin="280,480" width="10" x="185" y="155"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="164">ADD_IMM</text>
@@ -3305,12 +3305,12 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="145" y="84">Z</text>
       <rect height="3" stroke="none" width="10" x="150" y="99"/>
       <circ-port height="10" pin="340,950" width="10" x="155" y="95"/>
-      <circ-port height="10" pin="340,200" width="10" x="155" y="55"/>
       <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
       <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="40,180" width="8" x="46" y="116"/>
       <circ-port height="10" pin="340,600" width="10" x="155" y="75"/>
+      <circ-port height="8" pin="40,180" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="340,200" width="10" x="155" y="55"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="145" y="104">C</text>
       <rect height="3" stroke="none" width="10" x="150" y="119"/>
       <circ-port height="10" pin="340,1200" width="10" x="155" y="115"/>
