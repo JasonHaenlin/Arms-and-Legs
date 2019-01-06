@@ -4,8 +4,38 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
 <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="1"/>
+      <a name="incoming" val="32"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="1"/>
+      <a name="bit18" val="1"/>
+      <a name="bit19" val="1"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="1"/>
+      <a name="bit24" val="1"/>
+      <a name="bit25" val="1"/>
+      <a name="bit26" val="1"/>
+      <a name="bit27" val="1"/>
+      <a name="bit28" val="1"/>
+      <a name="bit29" val="1"/>
+      <a name="bit30" val="1"/>
+      <a name="bit31" val="1"/>
     </tool>
     <tool name="Pin">
       <a name="width" val="2"/>
@@ -25,9 +55,8 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="facing" val="north"/>
     </tool>
     <tool name="Constant">
-      <a name="facing" val="south"/>
-      <a name="width" val="32"/>
-      <a name="value" val="0x0"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x1f"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -187,16 +216,16 @@ end TCL_Generic;
       <rect height="4" stroke="none" width="10" x="210" y="238"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="204" y="64">PC</text>
       <rect height="20" stroke="none" width="150" x="60" y="310"/>
-      <circ-port height="10" pin="1320,410" width="10" x="215" y="195"/>
       <circ-port height="10" pin="1320,360" width="10" x="215" y="155"/>
-      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
       <circ-port height="10" pin="1320,170" width="10" x="215" y="135"/>
-      <circ-port height="10" pin="1320,270" width="10" x="215" y="235"/>
       <circ-port height="10" pin="1320,510" width="10" x="215" y="175"/>
-      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
       <circ-port height="10" pin="1320,210" width="10" x="215" y="255"/>
-      <circ-port height="10" pin="1340,1160" width="10" x="215" y="55"/>
       <circ-port height="8" pin="130,230" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="1340,1160" width="10" x="215" y="55"/>
+      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
+      <circ-port height="10" pin="1320,270" width="10" x="215" y="235"/>
+      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
+      <circ-port height="10" pin="1320,410" width="10" x="215" y="195"/>
       <rect fill="none" height="280" stroke="#000000" stroke-width="2" width="150" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="139" y="325">Controller</text>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="207" y="285">DP_Shift</text>
@@ -2296,14 +2325,14 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="102">RAM_Addr</text>
       <rect height="20" stroke="none" width="200" x="60" y="171"/>
       <rect fill="none" height="141" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
-      <circ-port height="10" pin="880,260" width="10" x="265" y="55"/>
       <circ-port height="8" pin="200,210" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="880,280" width="10" x="265" y="75"/>
       <circ-port height="10" pin="880,140" width="10" x="265" y="115"/>
-      <circ-port height="8" pin="200,260" width="8" x="46" y="76"/>
       <circ-port height="10" pin="880,370" width="10" x="265" y="95"/>
-      <circ-port height="8" pin="200,320" width="8" x="46" y="96"/>
       <circ-port height="10" pin="880,100" width="10" x="265" y="135"/>
+      <circ-port height="8" pin="200,320" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="200,260" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="880,280" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="880,260" width="10" x="265" y="55"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="186">Load_Store</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="74" y="124">Clk</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="144">Reset</text>
@@ -2523,10 +2552,10 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="325" y="83">Write_Enable</text>
       <rect height="4" stroke="none" width="10" x="330" y="78"/>
       <circ-port height="10" pin="570,160" width="10" x="335" y="55"/>
-      <circ-port height="8" pin="210,290" width="8" x="46" y="76"/>
       <circ-port height="10" pin="670,310" width="10" x="335" y="75"/>
-      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
       <circ-port height="8" pin="210,190" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="210,290" width="8" x="46" y="76"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="327" y="64">New_Stack_Pointer</text>
       <rect height="20" stroke="none" width="270" x="60" y="110"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="270" x="60" y="50"/>
@@ -2765,16 +2794,16 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="124">ADD</text>
       <rect height="3" stroke="none" width="10" x="180" y="139"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="144">SUB</text>
-      <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
       <circ-port height="10" pin="280,390" width="10" x="185" y="135"/>
-      <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
       <circ-port height="10" pin="280,300" width="10" x="185" y="115"/>
-      <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
       <circ-port height="10" pin="280,200" width="10" x="185" y="95"/>
-      <circ-port height="8" pin="40,190" width="8" x="46" y="116"/>
       <circ-port height="10" pin="280,120" width="10" x="185" y="75"/>
-      <circ-port height="8" pin="40,240" width="8" x="46" y="136"/>
       <circ-port height="10" pin="280,50" width="10" x="185" y="55"/>
+      <circ-port height="8" pin="40,240" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="40,190" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
       <rect height="3" stroke="none" width="10" x="180" y="159"/>
       <circ-port height="10" pin="280,480" width="10" x="185" y="155"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="164">ADD_IMM</text>
@@ -3360,12 +3389,12 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="145" y="84">Z</text>
       <rect height="3" stroke="none" width="10" x="150" y="99"/>
       <circ-port height="10" pin="340,950" width="10" x="155" y="95"/>
-      <circ-port height="8" pin="40,180" width="8" x="46" y="116"/>
       <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
       <circ-port height="10" pin="340,600" width="10" x="155" y="75"/>
-      <circ-port height="10" pin="340,200" width="10" x="155" y="55"/>
       <circ-port height="8" pin="40,80" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="340,200" width="10" x="155" y="55"/>
+      <circ-port height="8" pin="40,130" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="40,180" width="8" x="46" y="116"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="145" y="104">C</text>
       <rect height="3" stroke="none" width="10" x="150" y="119"/>
       <circ-port height="10" pin="340,1200" width="10" x="155" y="115"/>
@@ -4849,33 +4878,81 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(540,170)" to="(610,170)"/>
-    <wire from="(230,170)" to="(330,170)"/>
-    <wire from="(230,190)" to="(330,190)"/>
-    <wire from="(230,230)" to="(330,230)"/>
-    <wire from="(230,210)" to="(330,210)"/>
-    <comp loc="(540,170)" name="Flags_APSR"/>
-    <comp lib="0" loc="(230,170)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="Update_Mask"/>
+    <wire from="(370,1640)" to="(460,1640)"/>
+    <wire from="(530,1640)" to="(550,1640)"/>
+    <wire from="(590,1630)" to="(610,1630)"/>
+    <wire from="(390,1620)" to="(550,1620)"/>
+    <wire from="(370,1620)" to="(390,1620)"/>
+    <wire from="(390,1610)" to="(390,1620)"/>
+    <wire from="(460,1670)" to="(610,1670)"/>
+    <wire from="(160,1680)" to="(170,1680)"/>
+    <wire from="(160,1720)" to="(170,1720)"/>
+    <wire from="(160,1620)" to="(170,1620)"/>
+    <wire from="(160,1660)" to="(170,1660)"/>
+    <wire from="(160,1700)" to="(170,1700)"/>
+    <wire from="(460,1640)" to="(460,1670)"/>
+    <wire from="(130,1640)" to="(170,1640)"/>
+    <wire from="(480,100)" to="(550,100)"/>
+    <wire from="(170,100)" to="(270,100)"/>
+    <wire from="(170,120)" to="(270,120)"/>
+    <wire from="(170,160)" to="(270,160)"/>
+    <wire from="(170,140)" to="(270,140)"/>
+    <comp lib="0" loc="(160,1620)" name="Pin"/>
+    <comp lib="0" loc="(530,1640)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(230,190)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="Flags_In"/>
+    <comp lib="0" loc="(390,1610)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(230,230)" name="Pin">
-      <a name="label" val="Rst"/>
+    <comp lib="5" loc="(610,1630)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(230,210)" name="Clock">
-      <a name="label" val="clk"/>
+    <comp lib="0" loc="(160,1700)" name="Pin"/>
+    <comp lib="5" loc="(610,1670)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(610,170)" name="Pin">
+    <comp lib="3" loc="(590,1630)" name="Comparator"/>
+    <comp lib="0" loc="(160,1680)" name="Pin"/>
+    <comp lib="0" loc="(160,1720)" name="Pin"/>
+    <comp lib="8" loc="(197,1603)" name="Text">
+      <a name="text" val="code : 1001 - LS - Inférieur ou égal (non signé) - C == 0 &amp; Z == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp loc="(370,1620)" name="Conditional"/>
+    <comp lib="0" loc="(160,1660)" name="Pin"/>
+    <comp lib="0" loc="(130,1640)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(550,100)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
       <a name="label" val="Flags_out"/>
     </comp>
-    <comp lib="0" loc="(230,270)" name="Clock">
+    <comp lib="0" loc="(170,140)" name="Clock">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp loc="(480,100)" name="Flags_APSR"/>
+    <comp lib="0" loc="(170,100)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Update_Mask"/>
+    </comp>
+    <comp lib="0" loc="(170,160)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(170,120)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Flags_In"/>
+    </comp>
+    <comp lib="8" loc="(145,67)" name="Text">
+      <a name="text" val="Permet de générer le chronogramme"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(170,200)" name="Clock">
       <a name="label" val="sysclk"/>
     </comp>
   </circuit>
@@ -4953,6 +5030,10 @@ end TCL_Generic;
     <comp lib="0" loc="(300,300)" name="Clock">
       <a name="label" val="sysclk"/>
     </comp>
+    <comp lib="8" loc="(142,83)" name="Text">
+      <a name="text" val="Permet de générer le chronogramme"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
   </circuit>
   <circuit name="Test_SP_Address">
     <a name="circuit" val="Test_SP_Address"/>
@@ -4973,12 +5054,6 @@ end TCL_Generic;
     <wire from="(510,120)" to="(510,140)"/>
     <wire from="(510,290)" to="(510,310)"/>
     <wire from="(510,460)" to="(510,480)"/>
-    <wire from="(150,80)" to="(150,100)"/>
-    <wire from="(150,250)" to="(150,270)"/>
-    <wire from="(150,420)" to="(150,440)"/>
-    <wire from="(130,140)" to="(170,140)"/>
-    <wire from="(130,310)" to="(170,310)"/>
-    <wire from="(130,480)" to="(170,480)"/>
     <wire from="(460,100)" to="(500,100)"/>
     <wire from="(460,270)" to="(500,270)"/>
     <wire from="(460,440)" to="(500,440)"/>
@@ -4988,27 +5063,14 @@ end TCL_Generic;
     <wire from="(670,120)" to="(700,120)"/>
     <wire from="(670,290)" to="(700,290)"/>
     <wire from="(670,460)" to="(700,460)"/>
-    <wire from="(130,80)" to="(150,80)"/>
-    <wire from="(150,100)" to="(170,100)"/>
-    <wire from="(130,250)" to="(150,250)"/>
-    <wire from="(150,270)" to="(170,270)"/>
-    <wire from="(130,420)" to="(150,420)"/>
-    <wire from="(150,440)" to="(170,440)"/>
     <wire from="(500,460)" to="(510,460)"/>
     <wire from="(460,460)" to="(470,460)"/>
     <wire from="(160,120)" to="(170,120)"/>
-    <wire from="(160,290)" to="(170,290)"/>
-    <wire from="(160,460)" to="(170,460)"/>
+    <wire from="(160,140)" to="(170,140)"/>
+    <wire from="(160,100)" to="(170,100)"/>
     <wire from="(500,100)" to="(700,100)"/>
     <wire from="(500,270)" to="(700,270)"/>
     <wire from="(500,440)" to="(700,440)"/>
-    <comp lib="0" loc="(130,140)" name="Pin">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(130,80)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,120)" name="Pin"/>
     <comp loc="(460,100)" name="SP_Address"/>
     <comp lib="8" loc="(111,45)" name="Text">
       <a name="text" val="Test with negative gate"/>
@@ -5018,22 +5080,8 @@ end TCL_Generic;
       <a name="text" val="Test with positive gate"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(130,310)" name="Pin">
-      <a name="width" val="32"/>
-    </comp>
     <comp loc="(460,270)" name="SP_Address"/>
-    <comp lib="0" loc="(160,290)" name="Pin"/>
-    <comp lib="0" loc="(130,250)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp loc="(460,440)" name="SP_Address"/>
-    <comp lib="0" loc="(130,480)" name="Pin">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(130,420)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,460)" name="Pin"/>
     <comp lib="8" loc="(105,383)" name="Text">
       <a name="text" val="Test when disabled"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -5055,11 +5103,11 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(670,120)" name="Constant">
       <a name="width" val="32"/>
-      <a name="value" val="0xfffffff7"/>
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(670,290)" name="Constant">
       <a name="width" val="32"/>
-      <a name="value" val="0xf"/>
+      <a name="value" val="0x1e"/>
     </comp>
     <comp lib="0" loc="(500,260)" name="Probe">
       <a name="facing" val="south"/>
@@ -5100,6 +5148,35 @@ end TCL_Generic;
       <a name="text" val="vert : VALIDE   rouge : ERREUR"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
+    <comp lib="0" loc="(160,120)" name="Constant"/>
+    <comp lib="0" loc="(160,140)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0xf"/>
+    </comp>
+    <comp lib="0" loc="(160,100)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xb00f"/>
+    </comp>
+    <comp lib="0" loc="(170,290)" name="Constant"/>
+    <comp lib="0" loc="(170,310)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0xf"/>
+    </comp>
+    <comp lib="0" loc="(170,270)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xb08f"/>
+    </comp>
+    <comp lib="0" loc="(170,440)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xb00f"/>
+    </comp>
+    <comp lib="0" loc="(170,460)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(170,480)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0xf"/>
+    </comp>
   </circuit>
   <circuit name="Test_Conditional">
     <a name="circuit" val="Test_Conditional"/>
@@ -5111,7 +5188,6 @@ end TCL_Generic;
     <wire from="(390,1270)" to="(390,1280)"/>
     <wire from="(390,70)" to="(390,80)"/>
     <wire from="(460,1980)" to="(460,2010)"/>
-    <wire from="(130,1980)" to="(170,1980)"/>
     <wire from="(370,1980)" to="(460,1980)"/>
     <wire from="(530,960)" to="(550,960)"/>
     <wire from="(590,780)" to="(610,780)"/>
@@ -5125,8 +5201,10 @@ end TCL_Generic;
     <wire from="(460,1500)" to="(610,1500)"/>
     <wire from="(160,120)" to="(170,120)"/>
     <wire from="(160,520)" to="(170,520)"/>
+    <wire from="(160,440)" to="(170,440)"/>
     <wire from="(160,1000)" to="(170,1000)"/>
     <wire from="(160,1320)" to="(170,1320)"/>
+    <wire from="(160,1640)" to="(170,1640)"/>
     <wire from="(160,1720)" to="(170,1720)"/>
     <wire from="(160,1960)" to="(170,1960)"/>
     <wire from="(160,2040)" to="(170,2040)"/>
@@ -5135,8 +5213,6 @@ end TCL_Generic;
     <wire from="(390,2120)" to="(390,2130)"/>
     <wire from="(460,270)" to="(460,300)"/>
     <wire from="(460,1470)" to="(460,1500)"/>
-    <wire from="(130,270)" to="(170,270)"/>
-    <wire from="(130,1470)" to="(170,1470)"/>
     <wire from="(370,1470)" to="(460,1470)"/>
     <wire from="(460,2350)" to="(610,2350)"/>
     <wire from="(370,270)" to="(460,270)"/>
@@ -5151,20 +5227,20 @@ end TCL_Generic;
     <wire from="(460,990)" to="(610,990)"/>
     <wire from="(160,330)" to="(170,330)"/>
     <wire from="(160,250)" to="(170,250)"/>
-    <wire from="(160,810)" to="(170,810)"/>
     <wire from="(160,650)" to="(170,650)"/>
-    <wire from="(160,1530)" to="(170,1530)"/>
-    <wire from="(160,1210)" to="(170,1210)"/>
-    <wire from="(160,1450)" to="(170,1450)"/>
-    <wire from="(160,1850)" to="(170,1850)"/>
+    <wire from="(160,810)" to="(170,810)"/>
+    <wire from="(160,1130)" to="(170,1130)"/>
     <wire from="(160,2170)" to="(170,2170)"/>
     <wire from="(160,2570)" to="(170,2570)"/>
+    <wire from="(160,1210)" to="(170,1210)"/>
+    <wire from="(160,1450)" to="(170,1450)"/>
+    <wire from="(160,1530)" to="(170,1530)"/>
+    <wire from="(160,1850)" to="(170,1850)"/>
+    <wire from="(160,2490)" to="(170,2490)"/>
     <wire from="(390,410)" to="(390,420)"/>
     <wire from="(390,1610)" to="(390,1620)"/>
     <wire from="(460,2320)" to="(460,2350)"/>
     <wire from="(460,960)" to="(460,990)"/>
-    <wire from="(130,960)" to="(170,960)"/>
-    <wire from="(130,2320)" to="(170,2320)"/>
     <wire from="(370,960)" to="(460,960)"/>
     <wire from="(370,2320)" to="(460,2320)"/>
     <wire from="(530,100)" to="(550,100)"/>
@@ -5178,20 +5254,19 @@ end TCL_Generic;
     <wire from="(460,640)" to="(610,640)"/>
     <wire from="(460,1840)" to="(610,1840)"/>
     <wire from="(160,140)" to="(170,140)"/>
+    <wire from="(160,460)" to="(170,460)"/>
     <wire from="(160,940)" to="(170,940)"/>
     <wire from="(160,1020)" to="(170,1020)"/>
-    <wire from="(160,460)" to="(170,460)"/>
-    <wire from="(160,1660)" to="(170,1660)"/>
     <wire from="(160,1340)" to="(170,1340)"/>
+    <wire from="(160,1660)" to="(170,1660)"/>
     <wire from="(160,2060)" to="(170,2060)"/>
-    <wire from="(160,2300)" to="(170,2300)"/>
+    <wire from="(160,1980)" to="(170,1980)"/>
     <wire from="(160,2380)" to="(170,2380)"/>
+    <wire from="(160,2300)" to="(170,2300)"/>
     <wire from="(390,1100)" to="(390,1110)"/>
     <wire from="(390,2460)" to="(390,2470)"/>
     <wire from="(460,610)" to="(460,640)"/>
     <wire from="(460,1810)" to="(460,1840)"/>
-    <wire from="(130,610)" to="(170,610)"/>
-    <wire from="(130,1810)" to="(170,1810)"/>
     <wire from="(370,1810)" to="(460,1810)"/>
     <wire from="(370,610)" to="(460,610)"/>
     <wire from="(530,790)" to="(550,790)"/>
@@ -5203,21 +5278,21 @@ end TCL_Generic;
     <wire from="(370,2470)" to="(390,2470)"/>
     <wire from="(460,130)" to="(610,130)"/>
     <wire from="(460,1330)" to="(610,1330)"/>
-    <wire from="(160,670)" to="(170,670)"/>
     <wire from="(160,350)" to="(170,350)"/>
+    <wire from="(160,270)" to="(170,270)"/>
     <wire from="(160,590)" to="(170,590)"/>
+    <wire from="(160,670)" to="(170,670)"/>
     <wire from="(160,830)" to="(170,830)"/>
     <wire from="(160,1150)" to="(170,1150)"/>
-    <wire from="(160,1550)" to="(170,1550)"/>
-    <wire from="(160,1790)" to="(170,1790)"/>
-    <wire from="(160,1870)" to="(170,1870)"/>
     <wire from="(160,2190)" to="(170,2190)"/>
     <wire from="(160,2510)" to="(170,2510)"/>
+    <wire from="(160,1550)" to="(170,1550)"/>
+    <wire from="(160,1470)" to="(170,1470)"/>
+    <wire from="(160,1870)" to="(170,1870)"/>
+    <wire from="(160,1790)" to="(170,1790)"/>
     <wire from="(390,1950)" to="(390,1960)"/>
     <wire from="(460,100)" to="(460,130)"/>
     <wire from="(460,1300)" to="(460,1330)"/>
-    <wire from="(130,100)" to="(170,100)"/>
-    <wire from="(130,1300)" to="(170,1300)"/>
     <wire from="(370,1300)" to="(460,1300)"/>
     <wire from="(460,2180)" to="(610,2180)"/>
     <wire from="(370,100)" to="(460,100)"/>
@@ -5231,19 +5306,19 @@ end TCL_Generic;
     <wire from="(460,820)" to="(610,820)"/>
     <wire from="(160,160)" to="(170,160)"/>
     <wire from="(160,80)" to="(170,80)"/>
-    <wire from="(160,1040)" to="(170,1040)"/>
     <wire from="(160,480)" to="(170,480)"/>
-    <wire from="(160,1680)" to="(170,1680)"/>
+    <wire from="(160,960)" to="(170,960)"/>
+    <wire from="(160,1040)" to="(170,1040)"/>
     <wire from="(160,1280)" to="(170,1280)"/>
     <wire from="(160,1360)" to="(170,1360)"/>
+    <wire from="(160,1680)" to="(170,1680)"/>
     <wire from="(160,2000)" to="(170,2000)"/>
+    <wire from="(160,2320)" to="(170,2320)"/>
     <wire from="(160,2400)" to="(170,2400)"/>
     <wire from="(390,240)" to="(390,250)"/>
     <wire from="(390,1440)" to="(390,1450)"/>
     <wire from="(460,2150)" to="(460,2180)"/>
     <wire from="(460,790)" to="(460,820)"/>
-    <wire from="(130,790)" to="(170,790)"/>
-    <wire from="(130,2150)" to="(170,2150)"/>
     <wire from="(370,790)" to="(460,790)"/>
     <wire from="(370,2150)" to="(460,2150)"/>
     <wire from="(530,1130)" to="(550,1130)"/>
@@ -5256,22 +5331,22 @@ end TCL_Generic;
     <wire from="(370,1450)" to="(390,1450)"/>
     <wire from="(460,470)" to="(610,470)"/>
     <wire from="(460,1670)" to="(610,1670)"/>
-    <wire from="(160,690)" to="(170,690)"/>
     <wire from="(160,290)" to="(170,290)"/>
+    <wire from="(160,610)" to="(170,610)"/>
+    <wire from="(160,690)" to="(170,690)"/>
     <wire from="(160,770)" to="(170,770)"/>
     <wire from="(160,850)" to="(170,850)"/>
     <wire from="(160,1170)" to="(170,1170)"/>
-    <wire from="(160,1490)" to="(170,1490)"/>
-    <wire from="(160,1890)" to="(170,1890)"/>
-    <wire from="(160,2130)" to="(170,2130)"/>
     <wire from="(160,2210)" to="(170,2210)"/>
     <wire from="(160,2530)" to="(170,2530)"/>
+    <wire from="(160,2130)" to="(170,2130)"/>
+    <wire from="(160,1490)" to="(170,1490)"/>
+    <wire from="(160,1890)" to="(170,1890)"/>
+    <wire from="(160,1810)" to="(170,1810)"/>
     <wire from="(390,930)" to="(390,940)"/>
     <wire from="(390,2290)" to="(390,2300)"/>
     <wire from="(460,440)" to="(460,470)"/>
     <wire from="(460,1640)" to="(460,1670)"/>
-    <wire from="(130,440)" to="(170,440)"/>
-    <wire from="(130,1640)" to="(170,1640)"/>
     <wire from="(370,1640)" to="(460,1640)"/>
     <wire from="(460,2520)" to="(610,2520)"/>
     <wire from="(370,440)" to="(460,440)"/>
@@ -5283,20 +5358,20 @@ end TCL_Generic;
     <wire from="(370,2300)" to="(390,2300)"/>
     <wire from="(460,1160)" to="(610,1160)"/>
     <wire from="(160,180)" to="(170,180)"/>
+    <wire from="(160,100)" to="(170,100)"/>
+    <wire from="(160,420)" to="(170,420)"/>
     <wire from="(160,500)" to="(170,500)"/>
     <wire from="(160,980)" to="(170,980)"/>
-    <wire from="(160,420)" to="(170,420)"/>
+    <wire from="(160,1300)" to="(170,1300)"/>
     <wire from="(160,1380)" to="(170,1380)"/>
-    <wire from="(160,1620)" to="(170,1620)"/>
     <wire from="(160,1700)" to="(170,1700)"/>
+    <wire from="(160,1620)" to="(170,1620)"/>
     <wire from="(160,2020)" to="(170,2020)"/>
     <wire from="(160,2340)" to="(170,2340)"/>
     <wire from="(390,580)" to="(390,590)"/>
     <wire from="(390,1780)" to="(390,1790)"/>
     <wire from="(460,2490)" to="(460,2520)"/>
     <wire from="(460,1130)" to="(460,1160)"/>
-    <wire from="(130,1130)" to="(170,1130)"/>
-    <wire from="(130,2490)" to="(170,2490)"/>
     <wire from="(370,1130)" to="(460,1130)"/>
     <wire from="(370,2490)" to="(460,2490)"/>
     <wire from="(460,2010)" to="(610,2010)"/>
@@ -5308,21 +5383,22 @@ end TCL_Generic;
     <wire from="(390,1450)" to="(550,1450)"/>
     <wire from="(370,590)" to="(390,590)"/>
     <wire from="(370,1790)" to="(390,1790)"/>
-    <wire from="(160,630)" to="(170,630)"/>
     <wire from="(160,310)" to="(170,310)"/>
+    <wire from="(160,630)" to="(170,630)"/>
+    <wire from="(160,790)" to="(170,790)"/>
     <wire from="(160,870)" to="(170,870)"/>
     <wire from="(160,1110)" to="(170,1110)"/>
-    <wire from="(160,1190)" to="(170,1190)"/>
-    <wire from="(160,1510)" to="(170,1510)"/>
-    <wire from="(160,1830)" to="(170,1830)"/>
     <wire from="(160,2230)" to="(170,2230)"/>
     <wire from="(160,2470)" to="(170,2470)"/>
     <wire from="(160,2550)" to="(170,2550)"/>
+    <wire from="(160,1190)" to="(170,1190)"/>
+    <wire from="(160,1510)" to="(170,1510)"/>
+    <wire from="(160,1830)" to="(170,1830)"/>
+    <wire from="(160,2150)" to="(170,2150)"/>
     <comp lib="8" loc="(602,22)" name="Text">
       <a name="text" val="vert : VALIDE   rouge : ERREUR"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(160,140)" name="Pin"/>
     <comp lib="0" loc="(390,240)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
@@ -5331,46 +5407,29 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,160)" name="Pin"/>
-    <comp lib="0" loc="(130,270)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="3" loc="(590,90)" name="Comparator"/>
     <comp lib="0" loc="(530,100)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
     <comp lib="3" loc="(590,260)" name="Comparator"/>
-    <comp lib="0" loc="(160,290)" name="Pin"/>
-    <comp lib="8" loc="(140,232)" name="Text">
-      <a name="text" val="code : 0001 - NE - Différence - Z == 0"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
     <comp loc="(370,80)" name="Conditional"/>
     <comp lib="0" loc="(390,70)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(160,250)" name="Pin"/>
     <comp lib="5" loc="(610,90)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,310)" name="Pin"/>
-    <comp lib="0" loc="(160,120)" name="Pin"/>
     <comp lib="0" loc="(530,270)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(130,100)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,330)" name="Pin"/>
     <comp lib="8" loc="(143,62)" name="Text">
       <a name="text" val="code : 0000 - EQ - Egalité - Z == 1"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(160,80)" name="Pin"/>
     <comp lib="5" loc="(610,300)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
@@ -5379,45 +5438,29 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,180)" name="Pin"/>
-    <comp lib="0" loc="(160,350)" name="Pin"/>
     <comp loc="(370,250)" name="Conditional"/>
-    <comp lib="0" loc="(160,500)" name="Pin"/>
     <comp lib="0" loc="(530,440)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(160,520)" name="Pin"/>
-    <comp lib="0" loc="(160,420)" name="Pin"/>
-    <comp lib="0" loc="(160,480)" name="Pin"/>
     <comp lib="5" loc="(610,430)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,460)" name="Pin"/>
     <comp lib="3" loc="(590,430)" name="Comparator"/>
     <comp lib="0" loc="(390,410)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
     <comp loc="(370,420)" name="Conditional"/>
-    <comp lib="0" loc="(130,440)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="5" loc="(610,470)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
-    </comp>
-    <comp lib="8" loc="(143,401)" name="Text">
-      <a name="text" val="code : 0010 - CS - Retenue - C == 1"/>
-      <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp lib="5" loc="(610,600)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,650)" name="Pin"/>
-    <comp lib="0" loc="(160,690)" name="Pin"/>
     <comp lib="3" loc="(590,600)" name="Comparator"/>
     <comp lib="0" loc="(390,580)" name="Probe">
       <a name="facing" val="south"/>
@@ -5427,32 +5470,16 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,670)" name="Pin"/>
-    <comp lib="0" loc="(160,630)" name="Pin"/>
-    <comp lib="0" loc="(160,590)" name="Pin"/>
-    <comp lib="0" loc="(130,610)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp loc="(370,590)" name="Conditional"/>
     <comp lib="0" loc="(530,610)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
-    </comp>
-    <comp lib="8" loc="(143,571)" name="Text">
-      <a name="text" val="code : 0011 - CC - Pas de retenue - C == 0"/>
-      <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp lib="5" loc="(610,820)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
     <comp lib="3" loc="(590,780)" name="Comparator"/>
-    <comp lib="0" loc="(160,810)" name="Pin"/>
-    <comp lib="0" loc="(160,870)" name="Pin"/>
-    <comp lib="8" loc="(143,751)" name="Text">
-      <a name="text" val="code : 0100 - MI - Négatif - N == 1"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
     <comp lib="0" loc="(530,790)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
@@ -5462,26 +5489,15 @@ end TCL_Generic;
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(130,790)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="5" loc="(610,780)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,850)" name="Pin"/>
-    <comp lib="0" loc="(160,830)" name="Pin"/>
-    <comp lib="0" loc="(160,770)" name="Pin"/>
-    <comp lib="0" loc="(160,1020)" name="Pin"/>
-    <comp lib="0" loc="(160,1040)" name="Pin"/>
-    <comp lib="0" loc="(160,940)" name="Pin"/>
-    <comp lib="0" loc="(160,980)" name="Pin"/>
     <comp lib="0" loc="(530,960)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
     <comp loc="(370,940)" name="Conditional"/>
-    <comp lib="0" loc="(160,1000)" name="Pin"/>
     <comp lib="5" loc="(610,990)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
@@ -5499,18 +5515,11 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(130,960)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,1190)" name="Pin"/>
     <comp lib="5" loc="(610,1120)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,1110)" name="Pin"/>
-    <comp lib="0" loc="(160,1170)" name="Pin"/>
     <comp lib="3" loc="(590,1120)" name="Comparator"/>
-    <comp lib="0" loc="(160,1210)" name="Pin"/>
     <comp lib="0" loc="(390,1100)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
@@ -5523,10 +5532,6 @@ end TCL_Generic;
     <comp lib="0" loc="(530,1130)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
-    </comp>
-    <comp lib="0" loc="(160,1150)" name="Pin"/>
-    <comp lib="0" loc="(130,1130)" name="Pin">
-      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(390,1270)" name="Probe">
       <a name="facing" val="south"/>
@@ -5544,16 +5549,8 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,1320)" name="Pin"/>
-    <comp lib="0" loc="(160,1340)" name="Pin"/>
     <comp lib="3" loc="(590,1290)" name="Comparator"/>
-    <comp lib="0" loc="(160,1280)" name="Pin"/>
     <comp loc="(370,1280)" name="Conditional"/>
-    <comp lib="0" loc="(130,1300)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,1360)" name="Pin"/>
-    <comp lib="0" loc="(160,1380)" name="Pin"/>
     <comp lib="8" loc="(173,1092)" name="Text">
       <a name="text" val="code : 0110 - VS - Dépassage de capacité - V == 1"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -5562,22 +5559,16 @@ end TCL_Generic;
       <a name="text" val="code : 0111 - VC - Pas de dépassage de capacité - V == 0"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(130,1470)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp loc="(370,1450)" name="Conditional"/>
     <comp lib="5" loc="(610,1460)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,1490)" name="Pin"/>
-    <comp lib="0" loc="(160,1550)" name="Pin"/>
     <comp lib="5" loc="(610,1500)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
     <comp lib="3" loc="(590,1460)" name="Comparator"/>
-    <comp lib="0" loc="(160,1510)" name="Pin"/>
     <comp lib="0" loc="(390,1440)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
@@ -5586,25 +5577,16 @@ end TCL_Generic;
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(160,1450)" name="Pin"/>
-    <comp lib="0" loc="(160,1530)" name="Pin"/>
-    <comp lib="0" loc="(160,1700)" name="Pin"/>
-    <comp lib="0" loc="(160,1620)" name="Pin"/>
-    <comp lib="0" loc="(160,1660)" name="Pin"/>
     <comp lib="0" loc="(530,1640)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
     <comp loc="(370,1620)" name="Conditional"/>
     <comp lib="3" loc="(590,1630)" name="Comparator"/>
-    <comp lib="0" loc="(130,1640)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="0" loc="(390,1610)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(160,1680)" name="Pin"/>
     <comp lib="5" loc="(610,1670)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
@@ -5613,7 +5595,6 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,1720)" name="Pin"/>
     <comp lib="8" loc="(197,1603)" name="Text">
       <a name="text" val="code : 1001 - LS - Inférieur ou égal (non signé) - C == 0 &amp; Z == 1"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -5622,19 +5603,12 @@ end TCL_Generic;
       <a name="text" val="code : 1000 - HI - Supérieur (non signé) - C == 1 &amp; Z == 0"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(160,1870)" name="Pin"/>
-    <comp lib="0" loc="(160,1790)" name="Pin"/>
     <comp loc="(370,1790)" name="Conditional"/>
-    <comp lib="0" loc="(160,1830)" name="Pin"/>
     <comp lib="0" loc="(390,1780)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
     <comp lib="3" loc="(590,1800)" name="Comparator"/>
-    <comp lib="0" loc="(160,1890)" name="Pin"/>
-    <comp lib="0" loc="(130,1810)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="8" loc="(197,1773)" name="Text">
       <a name="text" val="code : 1010 - GE - Supérieur ou égal (signé) - N == V"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -5647,12 +5621,10 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,1850)" name="Pin"/>
     <comp lib="0" loc="(530,1810)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(160,2060)" name="Pin"/>
     <comp lib="0" loc="(390,1950)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
@@ -5661,16 +5633,10 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,2020)" name="Pin"/>
-    <comp lib="0" loc="(160,1960)" name="Pin"/>
     <comp lib="5" loc="(610,2010)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(130,1980)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(160,2000)" name="Pin"/>
     <comp loc="(370,1960)" name="Conditional"/>
     <comp lib="3" loc="(590,1970)" name="Comparator"/>
     <comp lib="0" loc="(530,1980)" name="Constant">
@@ -5681,8 +5647,6 @@ end TCL_Generic;
       <a name="text" val="code : 1011 - LT - Inférieur (signé) - N != V"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="0" loc="(160,2040)" name="Pin"/>
-    <comp lib="0" loc="(160,2130)" name="Pin"/>
     <comp lib="0" loc="(390,2120)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
@@ -5691,65 +5655,42 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,2210)" name="Pin"/>
     <comp lib="8" loc="(197,2113)" name="Text">
       <a name="text" val="code : 1100 - GT - Supérieur (signé) - Z == 0 &amp; N == V"/>
       <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(160,2190)" name="Pin"/>
-    <comp lib="0" loc="(130,2150)" name="Pin">
-      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(530,2150)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
-    <comp lib="0" loc="(160,2170)" name="Pin"/>
-    <comp lib="0" loc="(160,2230)" name="Pin"/>
     <comp lib="3" loc="(590,2140)" name="Comparator"/>
     <comp loc="(370,2130)" name="Conditional"/>
     <comp lib="5" loc="(610,2180)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,2380)" name="Pin"/>
     <comp lib="0" loc="(390,2290)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(160,2360)" name="Pin"/>
     <comp lib="0" loc="(530,2320)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x7"/>
     </comp>
     <comp loc="(370,2300)" name="Conditional"/>
-    <comp lib="0" loc="(130,2320)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="5" loc="(610,2310)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
     <comp lib="3" loc="(590,2310)" name="Comparator"/>
-    <comp lib="0" loc="(160,2400)" name="Pin"/>
-    <comp lib="0" loc="(160,2300)" name="Pin"/>
     <comp lib="5" loc="(610,2350)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="8" loc="(197,2283)" name="Text">
-      <a name="text" val="code : 1101 - LE - Inférieur ou égal (signé) - Z == 1 &amp; z != V"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(160,2340)" name="Pin"/>
-    <comp lib="0" loc="(160,2510)" name="Pin"/>
     <comp loc="(370,2470)" name="Conditional"/>
     <comp lib="8" loc="(197,2453)" name="Text">
       <a name="text" val="code : 1110 - AL - Toujours vrai"/>
       <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(130,2490)" name="Pin">
-      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(530,2490)" name="Constant">
       <a name="width" val="8"/>
@@ -5759,18 +5700,243 @@ end TCL_Generic;
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
-    <comp lib="0" loc="(160,2470)" name="Pin"/>
     <comp lib="0" loc="(390,2460)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(160,2550)" name="Pin"/>
-    <comp lib="0" loc="(160,2570)" name="Pin"/>
-    <comp lib="0" loc="(160,2530)" name="Pin"/>
     <comp lib="5" loc="(610,2520)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
     </comp>
     <comp lib="3" loc="(590,2480)" name="Comparator"/>
+    <comp lib="8" loc="(132,742)" name="Text">
+      <a name="text" val="code : 0100 - MI - Négatif - N == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(197,2283)" name="Text">
+      <a name="text" val="code : 1101 - LE - Inférieur ou égal (signé) - Z == 1 &amp; N != V"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,80)" name="Constant"/>
+    <comp lib="0" loc="(160,100)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd007"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,140)" name="Constant"/>
+    <comp lib="0" loc="(160,160)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,180)" name="Constant"/>
+    <comp lib="0" loc="(160,310)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,350)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,330)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,270)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd107"/>
+    </comp>
+    <comp lib="0" loc="(160,290)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,250)" name="Constant"/>
+    <comp lib="0" loc="(160,520)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,480)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,420)" name="Constant"/>
+    <comp lib="0" loc="(160,500)" name="Constant"/>
+    <comp lib="0" loc="(160,460)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,440)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd207"/>
+    </comp>
+    <comp lib="8" loc="(143,401)" name="Text">
+      <a name="text" val="code : 0010 - CS - Retenue - C == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(149,567)" name="Text">
+      <a name="text" val="code : 0011 - CC - Pas de retenue - C == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,650)" name="Constant"/>
+    <comp lib="0" loc="(160,610)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd307"/>
+    </comp>
+    <comp lib="0" loc="(160,690)" name="Constant"/>
+    <comp lib="0" loc="(160,630)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,590)" name="Constant"/>
+    <comp lib="0" loc="(160,670)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,850)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,830)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,870)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,810)" name="Constant"/>
+    <comp lib="0" loc="(160,790)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd407"/>
+    </comp>
+    <comp lib="0" loc="(160,770)" name="Constant"/>
+    <comp lib="0" loc="(160,1020)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1000)" name="Constant"/>
+    <comp lib="0" loc="(160,960)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd507"/>
+    </comp>
+    <comp lib="0" loc="(160,940)" name="Constant"/>
+    <comp lib="0" loc="(160,980)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1040)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1110)" name="Constant"/>
+    <comp lib="0" loc="(160,1150)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1190)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1130)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd607"/>
+    </comp>
+    <comp lib="0" loc="(160,1170)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1210)" name="Constant"/>
+    <comp lib="0" loc="(160,1360)" name="Constant"/>
+    <comp lib="0" loc="(160,1340)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1300)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd707"/>
+    </comp>
+    <comp lib="0" loc="(160,1380)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1320)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1280)" name="Constant"/>
+    <comp lib="0" loc="(160,1490)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1470)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd807"/>
+    </comp>
+    <comp lib="0" loc="(160,1450)" name="Constant"/>
+    <comp lib="0" loc="(160,1530)" name="Constant"/>
+    <comp lib="0" loc="(160,1510)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1550)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1720)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1620)" name="Constant"/>
+    <comp lib="0" loc="(160,1700)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1680)" name="Constant"/>
+    <comp lib="0" loc="(160,1640)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xd907"/>
+    </comp>
+    <comp lib="0" loc="(160,1660)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1850)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1810)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xda07"/>
+    </comp>
+    <comp lib="0" loc="(160,1890)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1830)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,1870)" name="Constant"/>
+    <comp lib="0" loc="(160,1790)" name="Constant"/>
+    <comp lib="0" loc="(160,2000)" name="Constant"/>
+    <comp lib="0" loc="(160,1960)" name="Constant"/>
+    <comp lib="0" loc="(160,1980)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xdb07"/>
+    </comp>
+    <comp lib="0" loc="(160,2020)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,2040)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,2060)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,2170)" name="Constant"/>
+    <comp lib="0" loc="(160,2130)" name="Constant"/>
+    <comp lib="0" loc="(160,2210)" name="Constant"/>
+    <comp lib="0" loc="(160,2230)" name="Constant"/>
+    <comp lib="0" loc="(160,2190)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,2150)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xdc07"/>
+    </comp>
+    <comp lib="0" loc="(160,2300)" name="Constant"/>
+    <comp lib="0" loc="(160,2380)" name="Constant"/>
+    <comp lib="0" loc="(160,2320)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xdd07"/>
+    </comp>
+    <comp lib="0" loc="(160,2360)" name="Constant"/>
+    <comp lib="0" loc="(160,2340)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,2400)" name="Constant"/>
+    <comp lib="0" loc="(160,2550)" name="Constant"/>
+    <comp lib="0" loc="(160,2490)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xde07"/>
+    </comp>
+    <comp lib="0" loc="(160,2570)" name="Constant"/>
+    <comp lib="0" loc="(160,2510)" name="Constant"/>
+    <comp lib="0" loc="(160,2470)" name="Constant"/>
+    <comp lib="0" loc="(160,2530)" name="Constant"/>
+    <comp lib="8" loc="(148,228)" name="Text">
+      <a name="text" val="code : 0001 - NE - Différence - Z == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
   </circuit>
 </project>
