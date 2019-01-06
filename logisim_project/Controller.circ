@@ -4841,4 +4841,110 @@ end TCL_Generic;
       <a name="size" val="20"/>
     </comp>
   </circuit>
+  <circuit name="Test_Flags_APSR">
+    <a name="circuit" val="Test_Flags_APSR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(540,170)" to="(610,170)"/>
+    <wire from="(230,170)" to="(330,170)"/>
+    <wire from="(230,190)" to="(330,190)"/>
+    <wire from="(230,230)" to="(330,230)"/>
+    <wire from="(230,210)" to="(330,210)"/>
+    <comp loc="(540,170)" name="Flags_APSR"/>
+    <comp lib="0" loc="(230,170)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Update_Mask"/>
+    </comp>
+    <comp lib="0" loc="(230,190)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Flags_In"/>
+    </comp>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(230,210)" name="Clock">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(610,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Flags_out"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Clock">
+      <a name="label" val="sysclk"/>
+    </comp>
+  </circuit>
+  <circuit name="Test_Load_Store">
+    <a name="circuit" val="Test_Load_Store"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(300,170)" to="(360,170)"/>
+    <wire from="(300,230)" to="(360,230)"/>
+    <wire from="(300,210)" to="(360,210)"/>
+    <wire from="(210,190)" to="(360,190)"/>
+    <wire from="(310,150)" to="(360,150)"/>
+    <wire from="(580,190)" to="(770,190)"/>
+    <wire from="(580,150)" to="(640,150)"/>
+    <wire from="(580,170)" to="(640,170)"/>
+    <wire from="(580,210)" to="(640,210)"/>
+    <wire from="(580,230)" to="(640,230)"/>
+    <wire from="(580,250)" to="(640,250)"/>
+    <wire from="(310,120)" to="(310,150)"/>
+    <wire from="(210,120)" to="(310,120)"/>
+    <comp loc="(580,150)" name="Load_Store"/>
+    <comp lib="0" loc="(300,170)" name="Pin">
+      <a name="label" val="En"/>
+    </comp>
+    <comp lib="0" loc="(300,230)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(640,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rm"/>
+    </comp>
+    <comp lib="0" loc="(640,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rd"/>
+    </comp>
+    <comp lib="0" loc="(640,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Load"/>
+    </comp>
+    <comp lib="0" loc="(640,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Store"/>
+    </comp>
+    <comp lib="0" loc="(640,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="PC_Hold"/>
+    </comp>
+    <comp lib="0" loc="(210,190)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="Stack_Pointer"/>
+    </comp>
+    <comp lib="0" loc="(210,120)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="0" loc="(770,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+      <a name="label" val="RAM_Addr"/>
+    </comp>
+    <comp lib="0" loc="(300,210)" name="Clock">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(300,300)" name="Clock">
+      <a name="label" val="sysclk"/>
+    </comp>
+  </circuit>
 </project>
