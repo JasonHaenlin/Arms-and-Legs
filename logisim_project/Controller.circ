@@ -2611,8 +2611,8 @@ end TCL_Generic;
       <a name="bit4" val="1"/>
       <a name="bit5" val="1"/>
       <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="none"/>
       <a name="bit9" val="none"/>
       <a name="bit10" val="none"/>
       <a name="bit11" val="none"/>
@@ -2622,6 +2622,7 @@ end TCL_Generic;
       <a name="bit15" val="none"/>
     </comp>
     <comp lib="0" loc="(390,110)" name="Bit Extender">
+      <a name="in_width" val="7"/>
       <a name="out_width" val="32"/>
       <a name="type" val="zero"/>
     </comp>
@@ -5054,11 +5055,11 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(670,120)" name="Constant">
       <a name="width" val="32"/>
-      <a name="value" val="0xffffff77"/>
+      <a name="value" val="0xfffffff7"/>
     </comp>
     <comp lib="0" loc="(670,290)" name="Constant">
       <a name="width" val="32"/>
-      <a name="value" val="0x8f"/>
+      <a name="value" val="0xf"/>
     </comp>
     <comp lib="0" loc="(500,260)" name="Probe">
       <a name="facing" val="south"/>
