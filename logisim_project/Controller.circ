@@ -4841,4 +4841,272 @@ end TCL_Generic;
       <a name="size" val="20"/>
     </comp>
   </circuit>
+  <circuit name="Test_Flags_APSR">
+    <a name="circuit" val="Test_Flags_APSR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(540,170)" to="(610,170)"/>
+    <wire from="(230,170)" to="(330,170)"/>
+    <wire from="(230,190)" to="(330,190)"/>
+    <wire from="(230,230)" to="(330,230)"/>
+    <wire from="(230,210)" to="(330,210)"/>
+    <comp loc="(540,170)" name="Flags_APSR"/>
+    <comp lib="0" loc="(230,170)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Update_Mask"/>
+    </comp>
+    <comp lib="0" loc="(230,190)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Flags_In"/>
+    </comp>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(230,210)" name="Clock">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(610,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Flags_out"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Clock">
+      <a name="label" val="sysclk"/>
+    </comp>
+  </circuit>
+  <circuit name="Test_Load_Store">
+    <a name="circuit" val="Test_Load_Store"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(300,170)" to="(360,170)"/>
+    <wire from="(300,230)" to="(360,230)"/>
+    <wire from="(300,210)" to="(360,210)"/>
+    <wire from="(210,190)" to="(360,190)"/>
+    <wire from="(310,150)" to="(360,150)"/>
+    <wire from="(580,190)" to="(770,190)"/>
+    <wire from="(580,150)" to="(640,150)"/>
+    <wire from="(580,170)" to="(640,170)"/>
+    <wire from="(580,210)" to="(640,210)"/>
+    <wire from="(580,230)" to="(640,230)"/>
+    <wire from="(580,250)" to="(640,250)"/>
+    <wire from="(310,120)" to="(310,150)"/>
+    <wire from="(210,120)" to="(310,120)"/>
+    <comp loc="(580,150)" name="Load_Store"/>
+    <comp lib="0" loc="(300,170)" name="Pin">
+      <a name="label" val="En"/>
+    </comp>
+    <comp lib="0" loc="(300,230)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(640,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rm"/>
+    </comp>
+    <comp lib="0" loc="(640,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rd"/>
+    </comp>
+    <comp lib="0" loc="(640,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Load"/>
+    </comp>
+    <comp lib="0" loc="(640,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Store"/>
+    </comp>
+    <comp lib="0" loc="(640,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="PC_Hold"/>
+    </comp>
+    <comp lib="0" loc="(210,190)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="Stack_Pointer"/>
+    </comp>
+    <comp lib="0" loc="(210,120)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="0" loc="(770,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="RAM_Addr"/>
+    </comp>
+    <comp lib="0" loc="(300,210)" name="Clock">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(300,300)" name="Clock">
+      <a name="label" val="sysclk"/>
+    </comp>
+  </circuit>
+  <circuit name="Test_SP_Address">
+    <a name="circuit" val="Test_SP_Address"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(180,260)" to="(180,270)"/>
+    <wire from="(460,120)" to="(510,120)"/>
+    <wire from="(460,290)" to="(510,290)"/>
+    <wire from="(500,150)" to="(500,160)"/>
+    <wire from="(500,90)" to="(500,100)"/>
+    <wire from="(500,320)" to="(500,330)"/>
+    <wire from="(500,260)" to="(500,270)"/>
+    <wire from="(500,430)" to="(500,440)"/>
+    <wire from="(500,490)" to="(500,500)"/>
+    <wire from="(150,80)" to="(150,100)"/>
+    <wire from="(150,250)" to="(150,270)"/>
+    <wire from="(150,420)" to="(150,440)"/>
+    <wire from="(130,140)" to="(170,140)"/>
+    <wire from="(130,310)" to="(170,310)"/>
+    <wire from="(130,480)" to="(170,480)"/>
+    <wire from="(460,100)" to="(500,100)"/>
+    <wire from="(460,270)" to="(500,270)"/>
+    <wire from="(460,440)" to="(500,440)"/>
+    <wire from="(740,110)" to="(760,110)"/>
+    <wire from="(740,280)" to="(760,280)"/>
+    <wire from="(740,450)" to="(760,450)"/>
+    <wire from="(670,120)" to="(700,120)"/>
+    <wire from="(670,290)" to="(700,290)"/>
+    <wire from="(670,460)" to="(700,460)"/>
+    <wire from="(130,80)" to="(150,80)"/>
+    <wire from="(150,100)" to="(170,100)"/>
+    <wire from="(130,250)" to="(150,250)"/>
+    <wire from="(150,270)" to="(170,270)"/>
+    <wire from="(130,420)" to="(150,420)"/>
+    <wire from="(150,440)" to="(170,440)"/>
+    <wire from="(560,140)" to="(760,140)"/>
+    <wire from="(560,310)" to="(760,310)"/>
+    <wire from="(560,480)" to="(760,480)"/>
+    <wire from="(500,160)" to="(510,160)"/>
+    <wire from="(500,330)" to="(510,330)"/>
+    <wire from="(500,500)" to="(510,500)"/>
+    <wire from="(500,460)" to="(510,460)"/>
+    <wire from="(460,460)" to="(470,460)"/>
+    <wire from="(160,120)" to="(170,120)"/>
+    <wire from="(160,290)" to="(170,290)"/>
+    <wire from="(160,460)" to="(170,460)"/>
+    <wire from="(500,100)" to="(700,100)"/>
+    <wire from="(500,270)" to="(700,270)"/>
+    <wire from="(500,440)" to="(700,440)"/>
+    <comp lib="0" loc="(130,140)" name="Pin">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(130,80)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin"/>
+    <comp loc="(460,100)" name="SP_Address"/>
+    <comp lib="8" loc="(111,45)" name="Text">
+      <a name="text" val="Test with negative gate"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(105,213)" name="Text">
+      <a name="text" val="Test with positive gate"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(130,310)" name="Pin">
+      <a name="width" val="32"/>
+    </comp>
+    <comp loc="(460,270)" name="SP_Address"/>
+    <comp lib="0" loc="(160,290)" name="Pin"/>
+    <comp lib="0" loc="(130,250)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(460,440)" name="SP_Address"/>
+    <comp lib="0" loc="(130,480)" name="Pin">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(130,420)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,460)" name="Pin"/>
+    <comp lib="8" loc="(105,383)" name="Text">
+      <a name="text" val="Test when disabled"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="1" loc="(560,140)" name="AND Gate"/>
+    <comp lib="0" loc="(500,150)" name="Power"/>
+    <comp lib="5" loc="(760,140)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(740,110)" name="Comparator">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="5" loc="(760,110)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(500,90)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10signed"/>
+    </comp>
+    <comp lib="0" loc="(670,120)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0xffffff77"/>
+    </comp>
+    <comp lib="0" loc="(670,290)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x8f"/>
+    </comp>
+    <comp lib="0" loc="(500,260)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10signed"/>
+    </comp>
+    <comp lib="0" loc="(500,320)" name="Power"/>
+    <comp lib="5" loc="(760,280)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="5" loc="(760,310)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(740,280)" name="Comparator">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="1" loc="(560,310)" name="AND Gate"/>
+    <comp lib="1" loc="(560,480)" name="AND Gate"/>
+    <comp lib="3" loc="(740,450)" name="Comparator">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="5" loc="(760,480)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(500,430)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10signed"/>
+    </comp>
+    <comp lib="5" loc="(760,450)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(670,460)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,490)" name="Power"/>
+    <comp lib="1" loc="(500,460)" name="NOT Gate"/>
+    <comp lib="8" loc="(685,48)" name="Text">
+      <a name="text" val="vert : VALIDE   rouge : ERREUR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
 </project>
