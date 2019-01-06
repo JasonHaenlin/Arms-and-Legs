@@ -4960,15 +4960,18 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
+    <wire from="(510,140)" to="(760,140)"/>
+    <wire from="(510,310)" to="(760,310)"/>
     <wire from="(180,260)" to="(180,270)"/>
     <wire from="(460,120)" to="(510,120)"/>
     <wire from="(460,290)" to="(510,290)"/>
-    <wire from="(500,150)" to="(500,160)"/>
     <wire from="(500,90)" to="(500,100)"/>
-    <wire from="(500,320)" to="(500,330)"/>
     <wire from="(500,260)" to="(500,270)"/>
     <wire from="(500,430)" to="(500,440)"/>
-    <wire from="(500,490)" to="(500,500)"/>
+    <wire from="(510,480)" to="(760,480)"/>
+    <wire from="(510,120)" to="(510,140)"/>
+    <wire from="(510,290)" to="(510,310)"/>
+    <wire from="(510,460)" to="(510,480)"/>
     <wire from="(150,80)" to="(150,100)"/>
     <wire from="(150,250)" to="(150,270)"/>
     <wire from="(150,420)" to="(150,440)"/>
@@ -4990,12 +4993,6 @@ end TCL_Generic;
     <wire from="(150,270)" to="(170,270)"/>
     <wire from="(130,420)" to="(150,420)"/>
     <wire from="(150,440)" to="(170,440)"/>
-    <wire from="(560,140)" to="(760,140)"/>
-    <wire from="(560,310)" to="(760,310)"/>
-    <wire from="(560,480)" to="(760,480)"/>
-    <wire from="(500,160)" to="(510,160)"/>
-    <wire from="(500,330)" to="(510,330)"/>
-    <wire from="(500,500)" to="(510,500)"/>
     <wire from="(500,460)" to="(510,460)"/>
     <wire from="(460,460)" to="(470,460)"/>
     <wire from="(160,120)" to="(170,120)"/>
@@ -5040,8 +5037,6 @@ end TCL_Generic;
       <a name="text" val="Test when disabled"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="1" loc="(560,140)" name="AND Gate"/>
-    <comp lib="0" loc="(500,150)" name="Power"/>
     <comp lib="5" loc="(760,140)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
@@ -5069,7 +5064,6 @@ end TCL_Generic;
       <a name="facing" val="south"/>
       <a name="radix" val="10signed"/>
     </comp>
-    <comp lib="0" loc="(500,320)" name="Power"/>
     <comp lib="5" loc="(760,280)" name="LED">
       <a name="color" val="#3df00e"/>
       <a name="offcolor" val="#ff2400"/>
@@ -5081,8 +5075,6 @@ end TCL_Generic;
     <comp lib="3" loc="(740,280)" name="Comparator">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(560,310)" name="AND Gate"/>
-    <comp lib="1" loc="(560,480)" name="AND Gate"/>
     <comp lib="3" loc="(740,450)" name="Comparator">
       <a name="width" val="32"/>
     </comp>
@@ -5102,11 +5094,682 @@ end TCL_Generic;
       <a name="width" val="32"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(500,490)" name="Power"/>
     <comp lib="1" loc="(500,460)" name="NOT Gate"/>
     <comp lib="8" loc="(685,48)" name="Text">
       <a name="text" val="vert : VALIDE   rouge : ERREUR"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
+  </circuit>
+  <circuit name="Test_Conditional">
+    <a name="circuit" val="Test_Conditional"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(390,1270)" to="(390,1280)"/>
+    <wire from="(390,70)" to="(390,80)"/>
+    <wire from="(460,1980)" to="(460,2010)"/>
+    <wire from="(130,1980)" to="(170,1980)"/>
+    <wire from="(370,1980)" to="(460,1980)"/>
+    <wire from="(530,960)" to="(550,960)"/>
+    <wire from="(590,780)" to="(610,780)"/>
+    <wire from="(590,2140)" to="(610,2140)"/>
+    <wire from="(530,2320)" to="(550,2320)"/>
+    <wire from="(390,940)" to="(550,940)"/>
+    <wire from="(390,2300)" to="(550,2300)"/>
+    <wire from="(370,80)" to="(390,80)"/>
+    <wire from="(370,1280)" to="(390,1280)"/>
+    <wire from="(460,300)" to="(610,300)"/>
+    <wire from="(460,1500)" to="(610,1500)"/>
+    <wire from="(160,120)" to="(170,120)"/>
+    <wire from="(160,520)" to="(170,520)"/>
+    <wire from="(160,1000)" to="(170,1000)"/>
+    <wire from="(160,1320)" to="(170,1320)"/>
+    <wire from="(160,1720)" to="(170,1720)"/>
+    <wire from="(160,1960)" to="(170,1960)"/>
+    <wire from="(160,2040)" to="(170,2040)"/>
+    <wire from="(160,2360)" to="(170,2360)"/>
+    <wire from="(390,760)" to="(390,770)"/>
+    <wire from="(390,2120)" to="(390,2130)"/>
+    <wire from="(460,270)" to="(460,300)"/>
+    <wire from="(460,1470)" to="(460,1500)"/>
+    <wire from="(130,270)" to="(170,270)"/>
+    <wire from="(130,1470)" to="(170,1470)"/>
+    <wire from="(370,1470)" to="(460,1470)"/>
+    <wire from="(460,2350)" to="(610,2350)"/>
+    <wire from="(370,270)" to="(460,270)"/>
+    <wire from="(530,610)" to="(550,610)"/>
+    <wire from="(530,1810)" to="(550,1810)"/>
+    <wire from="(590,430)" to="(610,430)"/>
+    <wire from="(590,1630)" to="(610,1630)"/>
+    <wire from="(390,590)" to="(550,590)"/>
+    <wire from="(390,1790)" to="(550,1790)"/>
+    <wire from="(370,770)" to="(390,770)"/>
+    <wire from="(370,2130)" to="(390,2130)"/>
+    <wire from="(460,990)" to="(610,990)"/>
+    <wire from="(160,330)" to="(170,330)"/>
+    <wire from="(160,250)" to="(170,250)"/>
+    <wire from="(160,810)" to="(170,810)"/>
+    <wire from="(160,650)" to="(170,650)"/>
+    <wire from="(160,1530)" to="(170,1530)"/>
+    <wire from="(160,1210)" to="(170,1210)"/>
+    <wire from="(160,1450)" to="(170,1450)"/>
+    <wire from="(160,1850)" to="(170,1850)"/>
+    <wire from="(160,2170)" to="(170,2170)"/>
+    <wire from="(160,2570)" to="(170,2570)"/>
+    <wire from="(390,410)" to="(390,420)"/>
+    <wire from="(390,1610)" to="(390,1620)"/>
+    <wire from="(460,2320)" to="(460,2350)"/>
+    <wire from="(460,960)" to="(460,990)"/>
+    <wire from="(130,960)" to="(170,960)"/>
+    <wire from="(130,2320)" to="(170,2320)"/>
+    <wire from="(370,960)" to="(460,960)"/>
+    <wire from="(370,2320)" to="(460,2320)"/>
+    <wire from="(530,100)" to="(550,100)"/>
+    <wire from="(530,1300)" to="(550,1300)"/>
+    <wire from="(590,1120)" to="(610,1120)"/>
+    <wire from="(390,80)" to="(550,80)"/>
+    <wire from="(390,1280)" to="(550,1280)"/>
+    <wire from="(590,2480)" to="(610,2480)"/>
+    <wire from="(370,420)" to="(390,420)"/>
+    <wire from="(370,1620)" to="(390,1620)"/>
+    <wire from="(460,640)" to="(610,640)"/>
+    <wire from="(460,1840)" to="(610,1840)"/>
+    <wire from="(160,140)" to="(170,140)"/>
+    <wire from="(160,940)" to="(170,940)"/>
+    <wire from="(160,1020)" to="(170,1020)"/>
+    <wire from="(160,460)" to="(170,460)"/>
+    <wire from="(160,1660)" to="(170,1660)"/>
+    <wire from="(160,1340)" to="(170,1340)"/>
+    <wire from="(160,2060)" to="(170,2060)"/>
+    <wire from="(160,2300)" to="(170,2300)"/>
+    <wire from="(160,2380)" to="(170,2380)"/>
+    <wire from="(390,1100)" to="(390,1110)"/>
+    <wire from="(390,2460)" to="(390,2470)"/>
+    <wire from="(460,610)" to="(460,640)"/>
+    <wire from="(460,1810)" to="(460,1840)"/>
+    <wire from="(130,610)" to="(170,610)"/>
+    <wire from="(130,1810)" to="(170,1810)"/>
+    <wire from="(370,1810)" to="(460,1810)"/>
+    <wire from="(370,610)" to="(460,610)"/>
+    <wire from="(530,790)" to="(550,790)"/>
+    <wire from="(590,1970)" to="(610,1970)"/>
+    <wire from="(530,2150)" to="(550,2150)"/>
+    <wire from="(390,770)" to="(550,770)"/>
+    <wire from="(390,2130)" to="(550,2130)"/>
+    <wire from="(370,1110)" to="(390,1110)"/>
+    <wire from="(370,2470)" to="(390,2470)"/>
+    <wire from="(460,130)" to="(610,130)"/>
+    <wire from="(460,1330)" to="(610,1330)"/>
+    <wire from="(160,670)" to="(170,670)"/>
+    <wire from="(160,350)" to="(170,350)"/>
+    <wire from="(160,590)" to="(170,590)"/>
+    <wire from="(160,830)" to="(170,830)"/>
+    <wire from="(160,1150)" to="(170,1150)"/>
+    <wire from="(160,1550)" to="(170,1550)"/>
+    <wire from="(160,1790)" to="(170,1790)"/>
+    <wire from="(160,1870)" to="(170,1870)"/>
+    <wire from="(160,2190)" to="(170,2190)"/>
+    <wire from="(160,2510)" to="(170,2510)"/>
+    <wire from="(390,1950)" to="(390,1960)"/>
+    <wire from="(460,100)" to="(460,130)"/>
+    <wire from="(460,1300)" to="(460,1330)"/>
+    <wire from="(130,100)" to="(170,100)"/>
+    <wire from="(130,1300)" to="(170,1300)"/>
+    <wire from="(370,1300)" to="(460,1300)"/>
+    <wire from="(460,2180)" to="(610,2180)"/>
+    <wire from="(370,100)" to="(460,100)"/>
+    <wire from="(530,440)" to="(550,440)"/>
+    <wire from="(530,1640)" to="(550,1640)"/>
+    <wire from="(590,260)" to="(610,260)"/>
+    <wire from="(590,1460)" to="(610,1460)"/>
+    <wire from="(390,420)" to="(550,420)"/>
+    <wire from="(390,1620)" to="(550,1620)"/>
+    <wire from="(370,1960)" to="(390,1960)"/>
+    <wire from="(460,820)" to="(610,820)"/>
+    <wire from="(160,160)" to="(170,160)"/>
+    <wire from="(160,80)" to="(170,80)"/>
+    <wire from="(160,1040)" to="(170,1040)"/>
+    <wire from="(160,480)" to="(170,480)"/>
+    <wire from="(160,1680)" to="(170,1680)"/>
+    <wire from="(160,1280)" to="(170,1280)"/>
+    <wire from="(160,1360)" to="(170,1360)"/>
+    <wire from="(160,2000)" to="(170,2000)"/>
+    <wire from="(160,2400)" to="(170,2400)"/>
+    <wire from="(390,240)" to="(390,250)"/>
+    <wire from="(390,1440)" to="(390,1450)"/>
+    <wire from="(460,2150)" to="(460,2180)"/>
+    <wire from="(460,790)" to="(460,820)"/>
+    <wire from="(130,790)" to="(170,790)"/>
+    <wire from="(130,2150)" to="(170,2150)"/>
+    <wire from="(370,790)" to="(460,790)"/>
+    <wire from="(370,2150)" to="(460,2150)"/>
+    <wire from="(530,1130)" to="(550,1130)"/>
+    <wire from="(590,950)" to="(610,950)"/>
+    <wire from="(530,2490)" to="(550,2490)"/>
+    <wire from="(390,1110)" to="(550,1110)"/>
+    <wire from="(590,2310)" to="(610,2310)"/>
+    <wire from="(390,2470)" to="(550,2470)"/>
+    <wire from="(370,250)" to="(390,250)"/>
+    <wire from="(370,1450)" to="(390,1450)"/>
+    <wire from="(460,470)" to="(610,470)"/>
+    <wire from="(460,1670)" to="(610,1670)"/>
+    <wire from="(160,690)" to="(170,690)"/>
+    <wire from="(160,290)" to="(170,290)"/>
+    <wire from="(160,770)" to="(170,770)"/>
+    <wire from="(160,850)" to="(170,850)"/>
+    <wire from="(160,1170)" to="(170,1170)"/>
+    <wire from="(160,1490)" to="(170,1490)"/>
+    <wire from="(160,1890)" to="(170,1890)"/>
+    <wire from="(160,2130)" to="(170,2130)"/>
+    <wire from="(160,2210)" to="(170,2210)"/>
+    <wire from="(160,2530)" to="(170,2530)"/>
+    <wire from="(390,930)" to="(390,940)"/>
+    <wire from="(390,2290)" to="(390,2300)"/>
+    <wire from="(460,440)" to="(460,470)"/>
+    <wire from="(460,1640)" to="(460,1670)"/>
+    <wire from="(130,440)" to="(170,440)"/>
+    <wire from="(130,1640)" to="(170,1640)"/>
+    <wire from="(370,1640)" to="(460,1640)"/>
+    <wire from="(460,2520)" to="(610,2520)"/>
+    <wire from="(370,440)" to="(460,440)"/>
+    <wire from="(530,1980)" to="(550,1980)"/>
+    <wire from="(590,600)" to="(610,600)"/>
+    <wire from="(590,1800)" to="(610,1800)"/>
+    <wire from="(390,1960)" to="(550,1960)"/>
+    <wire from="(370,940)" to="(390,940)"/>
+    <wire from="(370,2300)" to="(390,2300)"/>
+    <wire from="(460,1160)" to="(610,1160)"/>
+    <wire from="(160,180)" to="(170,180)"/>
+    <wire from="(160,500)" to="(170,500)"/>
+    <wire from="(160,980)" to="(170,980)"/>
+    <wire from="(160,420)" to="(170,420)"/>
+    <wire from="(160,1380)" to="(170,1380)"/>
+    <wire from="(160,1620)" to="(170,1620)"/>
+    <wire from="(160,1700)" to="(170,1700)"/>
+    <wire from="(160,2020)" to="(170,2020)"/>
+    <wire from="(160,2340)" to="(170,2340)"/>
+    <wire from="(390,580)" to="(390,590)"/>
+    <wire from="(390,1780)" to="(390,1790)"/>
+    <wire from="(460,2490)" to="(460,2520)"/>
+    <wire from="(460,1130)" to="(460,1160)"/>
+    <wire from="(130,1130)" to="(170,1130)"/>
+    <wire from="(130,2490)" to="(170,2490)"/>
+    <wire from="(370,1130)" to="(460,1130)"/>
+    <wire from="(370,2490)" to="(460,2490)"/>
+    <wire from="(460,2010)" to="(610,2010)"/>
+    <wire from="(590,90)" to="(610,90)"/>
+    <wire from="(530,270)" to="(550,270)"/>
+    <wire from="(530,1470)" to="(550,1470)"/>
+    <wire from="(590,1290)" to="(610,1290)"/>
+    <wire from="(390,250)" to="(550,250)"/>
+    <wire from="(390,1450)" to="(550,1450)"/>
+    <wire from="(370,590)" to="(390,590)"/>
+    <wire from="(370,1790)" to="(390,1790)"/>
+    <wire from="(160,630)" to="(170,630)"/>
+    <wire from="(160,310)" to="(170,310)"/>
+    <wire from="(160,870)" to="(170,870)"/>
+    <wire from="(160,1110)" to="(170,1110)"/>
+    <wire from="(160,1190)" to="(170,1190)"/>
+    <wire from="(160,1510)" to="(170,1510)"/>
+    <wire from="(160,1830)" to="(170,1830)"/>
+    <wire from="(160,2230)" to="(170,2230)"/>
+    <wire from="(160,2470)" to="(170,2470)"/>
+    <wire from="(160,2550)" to="(170,2550)"/>
+    <comp lib="8" loc="(602,22)" name="Text">
+      <a name="text" val="vert : VALIDE   rouge : ERREUR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,140)" name="Pin"/>
+    <comp lib="0" loc="(390,240)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(610,130)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,160)" name="Pin"/>
+    <comp lib="0" loc="(130,270)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(590,90)" name="Comparator"/>
+    <comp lib="0" loc="(530,100)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="3" loc="(590,260)" name="Comparator"/>
+    <comp lib="0" loc="(160,290)" name="Pin"/>
+    <comp lib="8" loc="(140,232)" name="Text">
+      <a name="text" val="code : 0001 - NE - Différence - Z == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp loc="(370,80)" name="Conditional"/>
+    <comp lib="0" loc="(390,70)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(160,250)" name="Pin"/>
+    <comp lib="5" loc="(610,90)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,310)" name="Pin"/>
+    <comp lib="0" loc="(160,120)" name="Pin"/>
+    <comp lib="0" loc="(530,270)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(130,100)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,330)" name="Pin"/>
+    <comp lib="8" loc="(143,62)" name="Text">
+      <a name="text" val="code : 0000 - EQ - Egalité - Z == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,80)" name="Pin"/>
+    <comp lib="5" loc="(610,300)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="5" loc="(610,260)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,180)" name="Pin"/>
+    <comp lib="0" loc="(160,350)" name="Pin"/>
+    <comp loc="(370,250)" name="Conditional"/>
+    <comp lib="0" loc="(160,500)" name="Pin"/>
+    <comp lib="0" loc="(530,440)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(160,520)" name="Pin"/>
+    <comp lib="0" loc="(160,420)" name="Pin"/>
+    <comp lib="0" loc="(160,480)" name="Pin"/>
+    <comp lib="5" loc="(610,430)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,460)" name="Pin"/>
+    <comp lib="3" loc="(590,430)" name="Comparator"/>
+    <comp lib="0" loc="(390,410)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp loc="(370,420)" name="Conditional"/>
+    <comp lib="0" loc="(130,440)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="5" loc="(610,470)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="8" loc="(143,401)" name="Text">
+      <a name="text" val="code : 0010 - CS - Retenue - C == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="5" loc="(610,600)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,650)" name="Pin"/>
+    <comp lib="0" loc="(160,690)" name="Pin"/>
+    <comp lib="3" loc="(590,600)" name="Comparator"/>
+    <comp lib="0" loc="(390,580)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(610,640)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,670)" name="Pin"/>
+    <comp lib="0" loc="(160,630)" name="Pin"/>
+    <comp lib="0" loc="(160,590)" name="Pin"/>
+    <comp lib="0" loc="(130,610)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(370,590)" name="Conditional"/>
+    <comp lib="0" loc="(530,610)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="8" loc="(143,571)" name="Text">
+      <a name="text" val="code : 0011 - CC - Pas de retenue - C == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="5" loc="(610,820)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(590,780)" name="Comparator"/>
+    <comp lib="0" loc="(160,810)" name="Pin"/>
+    <comp lib="0" loc="(160,870)" name="Pin"/>
+    <comp lib="8" loc="(143,751)" name="Text">
+      <a name="text" val="code : 0100 - MI - Négatif - N == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(530,790)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp loc="(370,770)" name="Conditional"/>
+    <comp lib="0" loc="(390,760)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(130,790)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="5" loc="(610,780)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,850)" name="Pin"/>
+    <comp lib="0" loc="(160,830)" name="Pin"/>
+    <comp lib="0" loc="(160,770)" name="Pin"/>
+    <comp lib="0" loc="(160,1020)" name="Pin"/>
+    <comp lib="0" loc="(160,1040)" name="Pin"/>
+    <comp lib="0" loc="(160,940)" name="Pin"/>
+    <comp lib="0" loc="(160,980)" name="Pin"/>
+    <comp lib="0" loc="(530,960)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp loc="(370,940)" name="Conditional"/>
+    <comp lib="0" loc="(160,1000)" name="Pin"/>
+    <comp lib="5" loc="(610,990)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(590,950)" name="Comparator"/>
+    <comp lib="0" loc="(390,930)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="8" loc="(143,921)" name="Text">
+      <a name="text" val="code : 0101 - PL - Positif ou nul - N == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="5" loc="(610,950)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(130,960)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,1190)" name="Pin"/>
+    <comp lib="5" loc="(610,1120)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,1110)" name="Pin"/>
+    <comp lib="0" loc="(160,1170)" name="Pin"/>
+    <comp lib="3" loc="(590,1120)" name="Comparator"/>
+    <comp lib="0" loc="(160,1210)" name="Pin"/>
+    <comp lib="0" loc="(390,1100)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp loc="(370,1110)" name="Conditional"/>
+    <comp lib="5" loc="(610,1160)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(530,1130)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(160,1150)" name="Pin"/>
+    <comp lib="0" loc="(130,1130)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(390,1270)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(610,1290)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(530,1300)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="5" loc="(610,1330)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,1320)" name="Pin"/>
+    <comp lib="0" loc="(160,1340)" name="Pin"/>
+    <comp lib="3" loc="(590,1290)" name="Comparator"/>
+    <comp lib="0" loc="(160,1280)" name="Pin"/>
+    <comp loc="(370,1280)" name="Conditional"/>
+    <comp lib="0" loc="(130,1300)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,1360)" name="Pin"/>
+    <comp lib="0" loc="(160,1380)" name="Pin"/>
+    <comp lib="8" loc="(173,1092)" name="Text">
+      <a name="text" val="code : 0110 - VS - Dépassage de capacité - V == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(200,1261)" name="Text">
+      <a name="text" val="code : 0111 - VC - Pas de dépassage de capacité - V == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(130,1470)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(370,1450)" name="Conditional"/>
+    <comp lib="5" loc="(610,1460)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,1490)" name="Pin"/>
+    <comp lib="0" loc="(160,1550)" name="Pin"/>
+    <comp lib="5" loc="(610,1500)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(590,1460)" name="Comparator"/>
+    <comp lib="0" loc="(160,1510)" name="Pin"/>
+    <comp lib="0" loc="(390,1440)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(530,1470)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(160,1450)" name="Pin"/>
+    <comp lib="0" loc="(160,1530)" name="Pin"/>
+    <comp lib="0" loc="(160,1700)" name="Pin"/>
+    <comp lib="0" loc="(160,1620)" name="Pin"/>
+    <comp lib="0" loc="(160,1660)" name="Pin"/>
+    <comp lib="0" loc="(530,1640)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp loc="(370,1620)" name="Conditional"/>
+    <comp lib="3" loc="(590,1630)" name="Comparator"/>
+    <comp lib="0" loc="(130,1640)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(390,1610)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(160,1680)" name="Pin"/>
+    <comp lib="5" loc="(610,1670)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="5" loc="(610,1630)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,1720)" name="Pin"/>
+    <comp lib="8" loc="(197,1603)" name="Text">
+      <a name="text" val="code : 1001 - LS - Inférieur ou égal (non signé) - C == 0 &amp; Z == 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(183,1435)" name="Text">
+      <a name="text" val="code : 1000 - HI - Supérieur (non signé) - C == 1 &amp; Z == 0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,1870)" name="Pin"/>
+    <comp lib="0" loc="(160,1790)" name="Pin"/>
+    <comp loc="(370,1790)" name="Conditional"/>
+    <comp lib="0" loc="(160,1830)" name="Pin"/>
+    <comp lib="0" loc="(390,1780)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="3" loc="(590,1800)" name="Comparator"/>
+    <comp lib="0" loc="(160,1890)" name="Pin"/>
+    <comp lib="0" loc="(130,1810)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="8" loc="(197,1773)" name="Text">
+      <a name="text" val="code : 1010 - GE - Supérieur ou égal (signé) - N == V"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="5" loc="(610,1840)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="5" loc="(610,1800)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,1850)" name="Pin"/>
+    <comp lib="0" loc="(530,1810)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(160,2060)" name="Pin"/>
+    <comp lib="0" loc="(390,1950)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(610,1970)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,2020)" name="Pin"/>
+    <comp lib="0" loc="(160,1960)" name="Pin"/>
+    <comp lib="5" loc="(610,2010)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(130,1980)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,2000)" name="Pin"/>
+    <comp loc="(370,1960)" name="Conditional"/>
+    <comp lib="3" loc="(590,1970)" name="Comparator"/>
+    <comp lib="0" loc="(530,1980)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="8" loc="(197,1943)" name="Text">
+      <a name="text" val="code : 1011 - LT - Inférieur (signé) - N != V"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,2040)" name="Pin"/>
+    <comp lib="0" loc="(160,2130)" name="Pin"/>
+    <comp lib="0" loc="(390,2120)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(610,2140)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,2210)" name="Pin"/>
+    <comp lib="8" loc="(197,2113)" name="Text">
+      <a name="text" val="code : 1100 - GT - Supérieur (signé) - Z == 0 &amp; N == V"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,2190)" name="Pin"/>
+    <comp lib="0" loc="(130,2150)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(530,2150)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(160,2170)" name="Pin"/>
+    <comp lib="0" loc="(160,2230)" name="Pin"/>
+    <comp lib="3" loc="(590,2140)" name="Comparator"/>
+    <comp loc="(370,2130)" name="Conditional"/>
+    <comp lib="5" loc="(610,2180)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,2380)" name="Pin"/>
+    <comp lib="0" loc="(390,2290)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(160,2360)" name="Pin"/>
+    <comp lib="0" loc="(530,2320)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp loc="(370,2300)" name="Conditional"/>
+    <comp lib="0" loc="(130,2320)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="5" loc="(610,2310)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(590,2310)" name="Comparator"/>
+    <comp lib="0" loc="(160,2400)" name="Pin"/>
+    <comp lib="0" loc="(160,2300)" name="Pin"/>
+    <comp lib="5" loc="(610,2350)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="8" loc="(197,2283)" name="Text">
+      <a name="text" val="code : 1101 - LE - Inférieur ou égal (signé) - Z == 1 &amp; z != V"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(160,2340)" name="Pin"/>
+    <comp lib="0" loc="(160,2510)" name="Pin"/>
+    <comp loc="(370,2470)" name="Conditional"/>
+    <comp lib="8" loc="(197,2453)" name="Text">
+      <a name="text" val="code : 1110 - AL - Toujours vrai"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(130,2490)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(530,2490)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="5" loc="(610,2480)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="0" loc="(160,2470)" name="Pin"/>
+    <comp lib="0" loc="(390,2460)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(160,2550)" name="Pin"/>
+    <comp lib="0" loc="(160,2570)" name="Pin"/>
+    <comp lib="0" loc="(160,2530)" name="Pin"/>
+    <comp lib="5" loc="(610,2520)" name="LED">
+      <a name="color" val="#3df00e"/>
+      <a name="offcolor" val="#ff2400"/>
+    </comp>
+    <comp lib="3" loc="(590,2480)" name="Comparator"/>
   </circuit>
 </project>
