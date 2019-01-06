@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<instructions>
+    <!-- 
+    <command>
+        <name>foo</name>
+        <pattern>foo r(?<1>[0-9]+), #(?<2>[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="8" value="1"></range>
+            <range max="7" min="3" value="#1"></range>
+            <range max="2" min="0" value="#2"></range>
+        </ranges>
+    </command>
+    
+    
+    name:    actual name of the command 
+    pattern: regex to parse te command
+                (?<n>[0-9]+) means "this is the nth variableof the command, and it is a number"
+                note that < and > have to be replaced with respectively &lt; and &gt;
+    range:   describes how to generate the output from the command
+    value:   if value is "n" then the 16-bit integer represented by "n" will be used
+             else if value is "#n" then the actual value is replaced by the corresponding one in the command
+    -->
+    <command>
+        <name>lsls</name>
+        <pattern>lsl(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="0">
+            </range>
+            <range max="10" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>lsrs</name>
+        <pattern>lsr(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="1">
+            </range>
+            <range max="10" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>asrs</name>
+        <pattern>asr(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="2">
+            </range>
+            <range max="10" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>adds</name>
+        <pattern>add(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), r(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="3">
+            </range>
+            <range max="10" min="10" value="0">
+            </range>
+            <range max="9" min="9" value="0">
+            </range>
+            <range max="8" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>subs</name>
+        <pattern>sub(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), r(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="3">
+            </range>
+            <range max="10" min="10" value="1">
+            </range>
+            <range max="9" min="9" value="0">
+            </range>
+            <range max="8" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>adds</name>
+        <pattern>add(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="3">
+            </range>
+            <range max="10" min="10" value="1">
+            </range>
+            <range max="9" min="9" value="0">
+            </range>
+            <range max="8" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>subs</name>
+        <pattern>sub(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #(?&lt;3&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="0">
+            </range>
+            <range max="12" min="11" value="3">
+            </range>
+            <range max="10" min="10" value="1">
+            </range>
+            <range max="9" min="9" value="1">
+            </range>
+            <range max="8" min="6" value="#3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>movs</name>
+        <pattern>mov(?s) r(?&lt;1&gt;[0-9]+), #(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="13" value="1">
+            </range>
+            <range max="12" min="11" value="0">
+            </range>
+            <range max="10" min="8" value="#1">
+            </range>
+            <range max="7" min="0" value="#2">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>ands</name>
+        <pattern>and(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="0">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>eors</name>
+        <pattern>eor(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="1">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>lsls</name>
+        <pattern>lsl(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="2">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>lsrs</name>
+        <pattern>lsr(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="3">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>asrs</name>
+        <pattern>asr(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="4">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>adcs</name>
+        <pattern>adc(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="5">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>sbcs</name>
+        <pattern>sbc(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="6">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>rors</name>
+        <pattern>ror(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="7">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>tst</name>
+        <pattern>tst r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="8">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>rsbs</name>
+        <pattern>rsbs r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), #0</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="9">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>cmp</name>
+        <pattern>cmp r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="10">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>cmn</name>
+        <pattern>cmn r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="11">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>orrs</name>
+        <pattern>orrs r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="12">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>muls</name>
+        <pattern>mul(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+), r(?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="13">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bic</name>
+        <pattern>bic r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="14">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>mvns</name>
+        <pattern>mvn(?s) r(?&lt;1&gt;[0-9]+), r(?&lt;2&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="10" value="16">
+            </range>
+            <range max="9" min="6" value="15">
+            </range>
+            <range max="5" min="3" value="#2">
+            </range>
+            <range max="2" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>str</name>
+        <pattern>str r(?&lt;1&gt;[0-9]+), \x5Bsp\x5D</pattern>
+        <ranges>
+            <range max="15" min="12" value="9">
+            </range>
+            <range max="11" min="11" value="0">
+            </range>
+            <range max="10" min="8" value="#1">
+            </range>
+            <range max="6" min="0" value="0">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>str</name>
+        <pattern>str r(?&lt;1&gt;[0-9]+), \x5Bsp, #(?&lt;2&gt;[0-9]+)\x5D</pattern>
+        <ranges>
+            <range max="15" min="12" value="9">
+            </range>
+            <range max="11" min="11" value="0">
+            </range>
+            <range max="10" min="8" value="#1">
+            </range>
+            <range max="6" min="0" value="#2">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>ldr</name>
+        <pattern>ldr r(?&lt;1&gt;[0-9]+), \x5Bsp, #(?&lt;2&gt;[0-9]+)\x5D</pattern>
+        <ranges>
+            <range max="15" min="12" value="9">
+            </range>
+            <range max="11" min="11" value="1">
+            </range>
+            <range max="10" min="8" value="#1">
+            </range>
+            <range max="6" min="0" value="#2">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>ldr</name>
+        <pattern>ldr r(?&lt;1&gt;[0-9]+), \x5Bsp\x5D</pattern>
+        <ranges>
+            <range max="15" min="12" value="9">
+            </range>
+            <range max="11" min="11" value="1">
+            </range>
+            <range max="10" min="8" value="#1">
+            </range>
+            <range max="6" min="0" value="0">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>add</name>
+        <pattern>add sp, #(?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="0">
+            </range>
+            <range max="7" min="7" value="0">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>sub</name>
+        <pattern>sub sp, #(?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="0">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>beq</name>
+        <pattern>beq (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="0">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bne</name>
+        <pattern>bne (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="1">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bcs</name>
+        <pattern>bcs (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="2">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bcc</name>
+        <pattern>bcc (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="3">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bmi</name>
+        <pattern>bmi (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="4">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bpl</name>
+        <pattern>bpl (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="5">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bvs</name>
+        <pattern>bvs (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="6">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bvc</name>
+        <pattern>bvc (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="7">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bhi</name>
+        <pattern>bhi (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="8">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bls</name>
+        <pattern>bls (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="9">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bge</name>
+        <pattern>bge (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="10">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>blt</name>
+        <pattern>blt (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="11">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bgt</name>
+        <pattern>bgt (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="12">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>ble</name>
+        <pattern>ble (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="13">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>bal</name>
+        <pattern>bal (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="14">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+    <command>
+        <name>b</name>
+        <pattern>b (?&lt;1&gt;[0-9]+)</pattern>
+        <ranges>
+            <range max="15" min="12" value="11">
+            </range>
+            <range max="11" min="8" value="14">
+            </range>
+            <range max="7" min="7" value="1">
+            </range>
+            <range max="6" min="0" value="#1">
+            </range>
+        </ranges>
+    </command>
+</instructions>
