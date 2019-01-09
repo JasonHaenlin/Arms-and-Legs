@@ -314,6 +314,7 @@ end TCL_Generic;
     <wire from="(2100,590)" to="(2160,590)"/>
     <wire from="(1090,270)" to="(1090,580)"/>
     <wire from="(830,110)" to="(1050,110)"/>
+    <wire from="(670,150)" to="(700,150)"/>
     <wire from="(2460,1670)" to="(2460,2000)"/>
     <wire from="(200,280)" to="(200,970)"/>
     <wire from="(1020,300)" to="(1020,1000)"/>
@@ -358,7 +359,6 @@ end TCL_Generic;
     <wire from="(880,150)" to="(880,200)"/>
     <wire from="(540,400)" to="(660,400)"/>
     <wire from="(790,190)" to="(840,190)"/>
-    <wire from="(670,230)" to="(720,230)"/>
     <wire from="(1040,120)" to="(1040,130)"/>
     <wire from="(810,130)" to="(810,140)"/>
     <wire from="(2390,770)" to="(2420,770)"/>
@@ -389,6 +389,7 @@ end TCL_Generic;
     <wire from="(1360,390)" to="(1380,390)"/>
     <wire from="(1680,380)" to="(1710,380)"/>
     <wire from="(2380,190)" to="(2420,190)"/>
+    <wire from="(710,230)" to="(720,230)"/>
     <wire from="(1240,590)" to="(1260,590)"/>
     <wire from="(1110,660)" to="(1320,660)"/>
     <wire from="(750,440)" to="(750,450)"/>
@@ -434,6 +435,7 @@ end TCL_Generic;
     <wire from="(1440,390)" to="(1480,390)"/>
     <wire from="(750,240)" to="(810,240)"/>
     <wire from="(2430,1190)" to="(2430,1370)"/>
+    <wire from="(670,180)" to="(710,180)"/>
     <wire from="(2390,1850)" to="(2400,1850)"/>
     <wire from="(2390,470)" to="(2470,470)"/>
     <wire from="(510,50)" to="(750,50)"/>
@@ -486,6 +488,7 @@ end TCL_Generic;
     <wire from="(2380,170)" to="(2430,170)"/>
     <wire from="(950,20)" to="(950,80)"/>
     <wire from="(2380,1040)" to="(2490,1040)"/>
+    <wire from="(710,180)" to="(710,230)"/>
     <wire from="(2400,830)" to="(2400,860)"/>
     <wire from="(200,970)" to="(1040,970)"/>
     <wire from="(1090,270)" to="(1110,270)"/>
@@ -793,7 +796,8 @@ end TCL_Generic;
     <comp lib="4" loc="(610,560)" name="ROM">
       <a name="dataWidth" val="16"/>
       <a name="contents">addr/data: 8 16
-9800 9901 4288 d406 9002 de07 9102
+9884 9984 9a80 9b78 4141 1a9b d108 9184
+9388
 </a>
       <a name="label" val="ROMa"/>
     </comp>
@@ -1131,6 +1135,10 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="Clk"/>
     </comp>
+    <comp lib="8" loc="(1514,312)" name="Text">
+      <a name="text" val="permet juste de reset après 10 instructions, pour tester et observer"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
   </circuit>
   <circuit name="CPU">
     <a name="circuit" val="CPU"/>
@@ -1460,7 +1468,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(780,590)" name="Probe">
       <a name="facing" val="south"/>
-      <a name="radix" val="10unsigned"/>
+      <a name="radix" val="10signed"/>
     </comp>
     <comp lib="0" loc="(800,610)" name="Tunnel">
       <a name="width" val="32"/>
