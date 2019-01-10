@@ -62,6 +62,7 @@ namespace Assembly
             };
             foreach (string line in lines)
             {
+                if (line != "")
                 newLines.Add(Translate(line));
             }
             return newLines.ToArray();

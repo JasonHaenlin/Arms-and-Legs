@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -9,82 +9,159 @@ namespace Assembly
 
     public class DirectivesTranslator
     {
-        readonly Dictionary<string, int> adresses;
-        readonly TypeHandler[] handlers;
+        readonly List<string> ramLabels;
+        readonly List<int> ramAdresses;
 
-        private readonly Regex declarationRegex = new Regex(@"(?<name>[0-9a-zA-Z]+):", RegexOptions.IgnoreCase);
-        private readonly Regex labelRegex = new Regex(@"(?<name>[0-9a-zA-Z]+)\n", RegexOptions.IgnoreCase);
-        private readonly Regex varRegex = new Regex(@"(?<name>[0-9a-zA-Z]+): (?<a>[.0-9a-zA-Z]+)", RegexOptions.IgnoreCase);
+        readonly List<string> romLabels;
+        readonly List<int> romAdresses;
+
+        readonly Dictionary<string, int> types;
 
         public DirectivesTranslator(string xmlContent)
         {
-            adresses = new Dictionary<string, int>();
+            ramLabels = new List<string>();
+            ramAdresses = new List<int>();
+            romLabels = new List<string>();
+            romAdresses = new List<int>();
+
+            types = new Dictionary<string, int>();
 
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(xmlContent);
-            List<TypeHandler> handlerList = new List<TypeHandler>();
             foreach (XmlNode node in xml.DocumentElement.ChildNodes)
             {
                 if (node.NodeType == XmlNodeType.Comment)
                     continue;
 
                 XmlNode nameNode = node.ChildNodes.Item(0);
-                XmlNode patternNode = node.ChildNodes.Item(1);
-                XmlNode offsetNode = node.ChildNodes.Item(2);
-                XmlNode replacementsNode = node.ChildNodes.Item(3);
+                XmlNode sizeNode = node.ChildNodes.Item(1);
 
                 string name = nameNode.InnerText;
-                string pattern = patternNode.InnerText;
-                int offsetFactor = int.Parse(offsetNode.InnerText);
-                List<string> replacements = new List<string>();
-                foreach (XmlNode n in replacementsNode.ChildNodes)
-                {
-                    string replacement = n.InnerXml;
-                    replacements.Add(replacement);
-                }
-                handlerList.Add(new TypeHandler(name, pattern, offsetFactor, replacements.ToArray()));
+                int size = int.Parse(sizeNode.InnerText);
+
+                types.Add(name, size);
             }
-            handlers = handlerList.ToArray();
+        }
+
+        string[] InitRam(string[] lines)
+        {
+            string replacement = "sub sp, #<size>\n" +
+                                 "mov r<register>, #<value>\n" +
+                                 "str r<register>, [sp, #<adress>]\n";
+
+            List<string> result = new List<string>();
+
+            string detectionNoValue = @"(?<label>[a-zA-Z.][0-9a-zA-Z_]+): .(?<type>[a-z]+)";
+            string detectionWithValue = @"(?<label>[a-zA-Z.][0-9a-zA-Z_]+): .(?<type>[a-z]+) 0x(?<value>[0-9a-fA-F]+)";
+
+            Regex noValueRegex = new Regex(detectionNoValue);
+            Regex valueRegex = new Regex(detectionWithValue);
+            int register = 0;
+            int value = 0;
+            int adress = 0;
+
+            foreach (string line in lines)
+            {
+                Match noValueMatch = noValueRegex.Match(line);
+                Match valueMatch = valueRegex.Match(line);
+
+                if (noValueMatch.Success)
+                {
+                    string type = noValueMatch.Groups["type"].Value;
+                    if (types.ContainsKey(type))
+                    {
+                        if (valueMatch.Success)
+                            value = int.Parse(valueMatch.Groups["value"].Value, NumberStyles.HexNumber);
+                        else
+                            value = 0;
+
+                        string tmp = replacement.Replace("<size>", types[type].ToString());
+                        tmp = tmp.Replace("<register>", register.ToString());
+                        tmp = tmp.Replace("<value>", value.ToString());
+                        tmp = tmp.Replace("<adress>", adress.ToString());
+
+                        ramLabels.Add(noValueMatch.Groups["label"].Value);
+                        ramAdresses.Add(adress);
+
+                        foreach (string tmpline in tmp.Split('\n'))
+                            result.Add(tmpline);
+                        adress+=types[type];
+                    }
+                }
+                else
+                {
+                    result.Add(line);
+                }
+            }
+            return result.ToArray();
         }
 
         string[] ParseLabels(string[] lines)
         {
-            List<string> newLines = new List<string>();
+            string label = @"^(?<label>[a-zA-Z\.][0-9a-zA-Z]*)([ \t:]*$)";
+            Regex labelRegex = new Regex(label);
 
-            int counter = -1; // stating at -1 since we have to increment at the beginning of each loop
-            foreach(string line in lines)
-            {
-                counter++;
-                Match labelMatch = declarationRegex.Match(line);
-                if (labelMatch.Success)
-                {
-                    string key = labelMatch.Groups["name"].Value;
-                    if (adresses.ContainsKey(key))
-                        Console.WriteLine("probably caught an error on line '{0}': duplicate label declaration", line);
-                    adresses.Add(key, counter);
-                    counter--; // this line will either be removed or replaced
-                    continue;
-                }
-            }
+            int counter = 0;
+            List<string> result = new List<string>();
+
+            //getting all label declarations
+
             foreach (string line in lines)
             {
-                string l = CleanLine(line);
-                foreach (KeyValuePair<string, int> adress in adresses)
+                Match match = labelRegex.Match(line);
+                if (match.Success)
                 {
-                    if (Regex.Match(line, " " + adress.Key + ":").Success)
+                    string lbl = match.Groups["label"].Value;
+                    romLabels.Add(lbl);
+                    romAdresses.Add(counter);
+                    counter--;
+                }
+                else
+                {
+                    counter++;
+                    result.Add(line); 
+                }
+            }
+            return result.ToArray();
+        }
+
+        string[] ReplaceLabels(string[] lines)
+        {
+            Regex[] labelsRegex = new Regex[ramLabels.Count + romLabels.Count];
+            for(int i=0; i<labelsRegex.Length; i++)
+            {
+                string label = i < ramLabels.Count ? ramLabels[i] : romLabels[i - ramLabels.Count];
+                labelsRegex[i] = new Regex("([ ,]*)(?<label>" + label+")");
+            }
+
+            List<string> result = new List<string>();
+
+            foreach (string line in lines)
+            {
+                string newLine = line;
+                foreach(Regex regex in labelsRegex)
+                {
+                    Match match = regex.Match(line);
+                    if (match.Success)
                     {
-                        l = line.Replace(adress.Key, adress.Value.ToString());
-                        break;
-                    }
-                    else if (Regex.Match(line, " " + adress.Key + " ").Success)
-                    {
-                        l = line.Replace(adress.Key, adress.Value.ToString());
-                        break;
+                        string label = match.Groups["label"].Value;
+                        if (romLabels.Contains(label))
+                        {
+                            int index = romLabels.IndexOf(label);
+                            int adress = romAdresses[index];
+                            newLine = newLine.Replace(label, adress.ToString());
+                        }
+                        else if (ramLabels.Contains(label))
+                        {
+                            int index = ramLabels.IndexOf(label);
+                            int adress = ramAdresses[index];
+                            newLine = newLine.Replace(label, "#" + adress.ToString());
+                        }
                     }
                 }
-                newLines.Add(l);
+                result.Add(newLine);
             }
-            return newLines.ToArray();
+            return result.ToArray();
         }
 
         private string CleanLine(string line)
@@ -97,35 +174,10 @@ namespace Assembly
 
         public string[] TranslateFile(string[] lines)
         {
+            lines = InitRam(lines);
             lines = ParseLabels(lines);
-            List<string> newLines = new List<string>();
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-                if (!labelRegex.IsMatch(line) && !varRegex.IsMatch(line))
-                    newLines.Add(line); // it's not a declaration
-                else if (varRegex.IsMatch(line))
-                {
-                    foreach (TypeHandler handler in handlers)
-                    {
-                        try
-                        {
-                            string[] translation = handler.Translate(line);
-                            newLines.AddRange(translation);
-                            break;
-                        }
-                        catch (FormatException)
-                        {
-                            continue;
-                        }
-                    }
-                }
-                else
-                {
-                    newLines.Add(line);
-                }
-            }
-            return newLines.ToArray(); 
+            lines = ReplaceLabels(lines);
+            return lines;
         }
     }
 }

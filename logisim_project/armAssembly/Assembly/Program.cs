@@ -14,23 +14,21 @@ namespace Assembly
             {
                 typesXml = File.ReadAllText("TypeSet.xml");
                 instructionsXml = File.ReadAllText("InstructionSet.xml");
-            } catch (FileNotFoundException)
+            }
+            catch (FileNotFoundException)
             {
                 foreach (string f in Directory.GetFiles(Directory.GetCurrentDirectory()))
                     Console.WriteLine(f);
-                //Console.WriteLine("Resource files not found ("+ Directory.GetCurrentDirectory() +"/Resources/TypeSet.xml, "+ Directory.GetCurrentDirectory() +"/Resources/InstructionSet.xml");
+                Console.WriteLine("Resource files not found (" + Directory.GetCurrentDirectory() + "/TypeSet.xml, " + Directory.GetCurrentDirectory() + "/InstructionSet.xml");
                 return;
             }
             DirectivesTranslator directivesTranslator = new DirectivesTranslator(typesXml);
-                InstructionsTranslator instructionsTranslator = new InstructionsTranslator(instructionsXml);
-                
-                string[] rawFile = File.ReadAllLines("/home/ulquiro/Projects/armAssembly/testcodes/max.s");
-                string[] instructions = directivesTranslator.TranslateFile(rawFile);
-                string[] data = instructionsTranslator.TranslateFile(instructions);
-                
-                File.WriteAllLines("a.out", data);
-                foreach (string line in data)
-                    Console.WriteLine(line);
+            InstructionsTranslator instructionsTranslator = new InstructionsTranslator(instructionsXml);
+
+            string[] rawFile = File.ReadAllLines(args[0]);
+            string[] instructions = directivesTranslator.TranslateFile(rawFile);
+            string[] data = instructionsTranslator.TranslateFile(instructions);
+            File.WriteAllLines(args[1], data);
         }
 
         private static bool CheckProgramArgs(string[] args)

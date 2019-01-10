@@ -1,43 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <types>
-    <command>
+    <type>
         <name>byte</name>
-        <pattern>(?&lt;addr&gt;[0-9a-zA-Z]+): .byte 0x(?&lt;1&gt;[0-9]+)</pattern>
-        <offset>4</offset>
-        <replacement>
-            <line>sub sp, sp, #4</line>
-            <line>movs r3, .1.</line>
-            <line>str r3, [sp, #.off.]</line>
-        </replacement>
-    </command>
-        <command>
-        <name>byte</name>
-        <pattern>(?&lt;addr&gt;[0-9a-zA-Z]+): .byte</pattern>
-        <offset>4</offset>
-        <replacement>
-            <line>sub sp, sp, #4</line>
-            <line>movs r3, #0</line>
-            <line>str r3, [sp, #.off.]</line>
-        </replacement>
-    </command>
-        <command>
+        <size>1</size>
+    </type>
+    <type>
+        <name>hword</name>
+        <size>2</size>
+    </type>
+    <type>
         <name>word</name>
-        <pattern>(?&lt;addr&gt;[0-9a-zA-Z]+): .word 0x(?&lt;1&gt;[0-9]+)</pattern>
-        <offset>4</offset>
-        <replacement>
-            <line>sub sp, sp, #4</line>
-            <line>movs r3, .1.</line>
-            <line>str r3, [sp, #.off.]</line>
-        </replacement>
-    </command>
-        <command>
-        <name>word</name>
-        <pattern>(?&lt;addr&gt;[0-9a-zA-Z]+): .word</pattern>
-        <offset>4</offset>
-        <replacement>
-            <line>sub sp, sp, #4</line>
-            <line>movs r3, #0</line>
-            <line>str r3, [sp, #.off.]</line>
-        </replacement>
-    </command>    
+        <size>4</size>
+    </type>
 </types>
