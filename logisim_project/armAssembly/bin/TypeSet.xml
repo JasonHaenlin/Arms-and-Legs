@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<types>
+    <type>
+        <name>byte</name>
+        <size>1</size>
+    </type>
+    <type>
+        <name>hword</name>
+        <size>2</size>
+    </type>
+    <type>
+        <name>word</name>
+        <size>4</size>
+    </type>
+</types>
