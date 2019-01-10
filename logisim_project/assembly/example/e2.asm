@@ -1,4 +1,3 @@
 v2.0 raw
-#Commentary line
 e002 0000 0000 0000 2201 2303 189a 3b01
 d1fc 46c0 46c0 46c0 46c0 46c0
