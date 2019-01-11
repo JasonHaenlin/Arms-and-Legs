@@ -1,5 +1,29 @@
 # SI3 Architecture Project
 
+## Directory
+
+    - doc
+        - pictures
+        - Projet_PARM_SI3_2018.pdf
+    - examples
+        - c (example program and assembly files)
+        - calcultrice (an other example)
+        - a bunch of examples for logisim
+        - [...]
+    - logisim_project
+        - armAssembly
+            - Assembly (parser program in C#)
+            - bin (binary file to execute the parser)
+            - README.md (information about how to use the program)
+            - deprecated (first implemention using Python (not finish))
+            - [...]
+        - test
+        - ALU.circ
+        - BancDeRegistre.circ
+        - Controlleur.circ
+        - Machine.circ (main circuit)
+    - README.md
+
 ## About
 
 [github repository](https://github.com/JasonHaenlin/Arms-and-Legs.git)
@@ -16,7 +40,8 @@ But also the use of condition to make decision and **jump** to a specific line t
 A Unit of Arithmetic and logic is also here to make and the computations. 
 
 ## supervisors
-> Benoit Miramond <br>
+> Benoit Miramond 
+<br>
 > Igor Litovsky
 
 ## Team
@@ -86,6 +111,10 @@ you can also use :
 > In logisim **project>analyze circuit**
 
 ### Run a Program
+
+After lauching **Logisim** you need to open the **Machine.circ** file
+<br>*File>Open* and choose *./logisim_project/Machine.circ* 
+
 Global view of the project
 
 ![Logisim_main](doc/pictures/logisim_main.PNG)

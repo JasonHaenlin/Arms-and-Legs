@@ -46,7 +46,7 @@ The output file follows Logisim input format:
 
 This file describes the instructions and how to translate them.
 To add an instruction add these lines right before  `</instructions>`
-
+```xml
        <command>
             <name>foo</name>
             <pattern>foo r(?<1>[0-9]+), #(?<2>[0-9]+)</pattern>
@@ -56,24 +56,24 @@ To add an instruction add these lines right before  `</instructions>`
                 <range max="2" min="0" value="#2"></range>
             </ranges>
         </command>
-    
-    name:    actual name of the command
-    pattern: regex to parse te command
-    (?<n>[0-9]+) means "this is the nth variable of the command, and it is a number"
-    note that < and > have to be replaced with respectively &lt; and &gt;
-    range:
-        describes how to generate the output from the command
-    value:
-        if value is "n" then the 16-bit integer represented by "n" will be used
-        else if value is "#n" then the actual value is replaced by the corresponding one in the command
+```
+- **name**:    actual name of the command
+- **pattern**: regex to parse te command
+`(?<n>[0-9]+)` means "this is the nth variable of the command, and it is a number"<br>
+`note that < and > have to be replaced with respectively &lt; and &gt;`
+- **range**:
+    describes how to generate the output from the command
+- **value**:
+    if value is "n" then the 16-bit integer represented by "n" will be used
+    else if value is "#n" then the actual value is replaced by the corresponding one in the command
 
 
 #### TypeSet.xml
-
+```xml
        <type>
            <name>byte</name>
            <size>1</size>
        </type>
-    
-    name:	actual name of the type
-    size:	size of the data in bytes
+```
+  - **name**:	actual name of the type
+  - **size**:	size of the data in bytes
