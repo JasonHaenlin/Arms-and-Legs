@@ -2,6 +2,9 @@
 
 ## About
 
+[github repository](https://github.com/JasonHaenlin/Arms-and-Legs.git)
+ *ask Jason ( jason.haenlin@etu.univ-cotedazur.fr ) for authorization*
+
 Creation of a CPU based on the **ARM** architecture with simplifications. 
 The main purpose of the project is to undersand the concept behind a CPU using basic assembly instructions.
 
