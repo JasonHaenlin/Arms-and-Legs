@@ -40,8 +40,7 @@ But also the use of condition to make decision and **jump** to a specific line t
 A Unit of Arithmetic and logic is also here to make and the computations. 
 
 ## supervisors
-> Benoit Miramond 
-<br>
+> Benoit Miramond<br>
 > Igor Litovsky
 
 ## Team
