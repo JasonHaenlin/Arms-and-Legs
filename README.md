@@ -2,11 +2,19 @@
 
 ## About
 
-Creation of a CPU based on the **ARM** architecture with simplifications. The main purpose of the project is to undersand the concept behind a CPU using basic assembly instructions.
+Creation of a CPU based on the **ARM** architecture with simplifications. 
+The main purpose of the project is to undersand the concept behind a CPU using basic assembly instructions.
 
-In result of this project, we are able to undersant how the different communication are made and why. We also aknowledge how the **RAM**, **ROM** and **register** are used for variables and instructions.
+In result of this project, we are able to undersant how the different communication are made and why. 
+We also aknowledge how the **RAM**, **ROM** and **register** are used for variables and instructions.
 
-With this **CPU**, we are able to execute basic program to **store**, **load** variables in the **RAM** et **register**. But also the use of condition to make decision and **jump** to a specific line to do a specific instruction. A Unit Arithmetic logic is also here to make and thes computations. 
+With this **CPU**, we are able to execute basic program to **store**, **load** variables in the **RAM** et **register**. 
+But also the use of condition to make decision and **jump** to a specific line to do a specific instruction. 
+A Unit of Arithmetic and logic is also here to make and the computations. 
+
+## supervisors
+> Benoit Miramond <br>
+> Igor Litovsky
 
 ## Team
 >Florent Robert     : UAL main developer<br> 
@@ -39,13 +47,13 @@ With this **CPU**, we are able to execute basic program to **store**, **load** v
 ```
 #### result in hexadecimal
 ```s
-9800
-9901
-4288
-d406
-9002
-de07
-9102
+9800 #PC1 LDR R0, A
+9901 #PC2 LDR R1, B
+4288 #PC3 CMP R0, R1
+d406 #PC4 BMI else
+9002 #PC5 STR R0, MAX
+de07 #PC6 B endif
+9102 #PC7 STR R1, MAX 
 ```
 
 ## Logisim
@@ -87,9 +95,13 @@ the examples folder with the prefix **rom** and in second you might need to load
  2. The clock button can be use to move step by step and observe the changement in the ROM, RAM and register
  3. The reset button can be used to reset the Circuit and the Counter to 0 to start again from instruction 1.
 
+# Overview
+
+>Read the project documentation for further information.<br>
+ *./doc/Projet_PARM_SI3_2018.pdf*
+
 # Mnemonics
 
 **Immediat** : an immediate is a piece of (constant) information stored as part of the current instruction instead of being in the memory or register. They are generally used to load instructions and perform arithmetic or logical operations.
 
-**Registers** : 
  
