@@ -5,6 +5,7 @@
     - doc
         - pictures
         - Projet_PARM_SI3_2018.pdf
+        - projet_PARM_soutenance.pdf
     - examples
         - c (example program and assembly files)
         - calcultrice (an other example)
